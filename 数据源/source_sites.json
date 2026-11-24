@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "description": "官方来源登记表（阶段一：仅建登记表骨架，不写入任何「已核验」结论）。",
+  "truthfulness_note": "本文件中所有 URL 均来自用户提供的《开发 Agent 执行指令 V1.0》，不是由 AI 生成的。所有条目的 whitelist_status 均为「待核验」；阶段二须实地访问、核对发布主体与页面正文后才能改为「已确认」。未核验链接不得作为已入库政策来源。",
+  "channel_templates": [
+    {
+      "site_role": "government_portal",
+      "site_type": "政府门户",
+      "label_suffix": "政府门户网站（候选）",
+      "description": "省/市人民政府门户，含政府信息公开栏目"
+    },
+    {
+      "site_role": "education_authority",
+      "site_type": "教育行政部门",
+      "label_suffix": "教育行政部门网站（候选）",
+      "description": "省教育厅 / 市教育局官网"
+    }
+  ],
+  "seed_rule": "为 26 个行政检索单位各生成 2 条候选渠道记录，共 52 条。base_url 一律为空，whitelist_status='待核验'。阶段二实地核验后填写。",
+  "explicit_sites": [
+    {
+      "region_code": "320000",
+      "site_name": "江苏省教育厅（用户提供的测试站点）",
+      "site_type": "教育行政部门",
+      "base_url": "https://jyt.jiangsu.gov.cn/",
+      "whitelist_status": "待核验",
+      "provided_by": "开发 Agent 执行指令 V1.0 · 阶段二 测试一",
+      "notes": "域名由用户提供的文章 URL 解析得到；尚未核验栏目归属与白名单资格。"
+    },
+    {
+      "region_code": "320100",
+      "site_name": "南京市教育局（用户提供的测试站点）",
+      "site_type": "教育行政部门",
+      "base_url": "https://edu.nanjing.gov.cn/",
+      "whitelist_status": "待核验",
+      "provided_by": "开发 Agent 执行指令 V1.0 · 阶段二 测试二",
+      "notes": "该站点用于「省级原文—城市转载」去重测试；转载不得生成新的独立政策。"
+    },
+    {
+      "region_code": "330000",
+      "site_name": "浙江省教育考试院（用户提供的测试站点）",
+      "site_type": "教育系统直属事业机构",
+      "base_url": "https://www.zjzs.net/",
+      "whitelist_status": "待核验",
+      "provided_by": "开发 Agent 执行指令 V1.0 · 阶段二 测试三",
+      "notes": "按 PRD 2.3，直属事业机构须单独核验发布资格与材料性质，不自动等同于行政部门正式文件；原始发文机关待查，不得臆造原件链接。"
+    }
+  ],
+  "provided_article_urls": [
+    {
+      "purpose": "阶段二 测试一：江苏省政策原文",
+      "url": "https://jyt.jiangsu.gov.cn/art/2025/5/9/art_58320_11561838.html",
+      "expected_title": "人工智能赋能教育高质量发展行动方案（2025—2027年）",
+      "status": "用户提供，未核验",
+      "note": "仅作为阶段二采集任务的输入，阶段一不写入数据库、不计入任何统计。"
+    },
+    {
+      "purpose": "阶段二 测试二：南京市官方转载",
+      "url": "https://edu.nanjing.gov.cn/njsjyj/202506/t20250604_5577484.html",
+      "expected_title": "（待抓取确认）",
+      "status": "用户提供，未核验",
+      "note": "目标是确认转载不产生新的南京市政策实体。"
+    },
+    {
+      "purpose": "阶段二 测试三：浙江省官方渠道政策全文",
+      "url": "https://www.zjzs.net/art/2025/4/29/art_320_11097.html",
+      "expected_title": "浙江省推进“人工智能+教育”行动方案（2025—2029年）",
+      "status": "用户提供，未核验",
+      "note": "须记录发布渠道、原始发文机关与实际文件日期；无法确认原件时如实记为「官方渠道全文发布/转载」。"
+    }
+  ]
+}

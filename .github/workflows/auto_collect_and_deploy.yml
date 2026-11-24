@@ -1,0 +1,64 @@
+name: 人工智能教育政策自动采集与在线部署
+
+on:
+  push:
+    branches: ["main", "master"]
+  schedule:
+    - cron: '0 0 * * 1'   # 每周一 08:00（北京时间）自动增量采集并重新部署
+  workflow_dispatch:       # 支持在 GitHub Actions 页面随时手动一键触发
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-and-collect"
+  cancel-in-progress: false
+
+jobs:
+  collect-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装采集与解析依赖
+        run: pip install -r collector/requirements.txt
+
+      - name: 运行五地官方站点增量采集与去重
+        run: python collector/auto_collector.py --config collector/sources_config.json --live --delay 1.0
+
+      - name: 重新构建离线/在线交互网页 (index.html)
+        run: python collector/build_html_v5.py
+
+      - name: 自动提交新增政策与更新后的网页
+        run: |
+          git config user.name "AI-Edu-Policy-Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add 数据源/v5_full_dataset.json index.html
+          git diff --cached --quiet || (git commit -m "chore: 自动增量采集更新人工智能教育政策资料库" && git push)
+
+      - name: 准备 GitHub Pages 发布产物
+        uses: actions/configure-pages@v5
+
+      - name: 上传静态站点产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: collect-and-build
+    steps:
+      - name: 发布至 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

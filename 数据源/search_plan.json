@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "description": "阶段二 2B/2D 可编辑检索计划。只包含用户材料给出的 URL 与关键词，以及 2A 已确认来源；不含任何按域名规律拼接或推测的网址。",
+  "truthfulness_note": "本文件的 explicit_targets 全部逐字取自 data/source_sites.json 的 provided_article_urls（用户提供，未核验）。keywords 取自《第二阶段开发指令 V2.0》§2D。检索任务只是「检索计划」，绝不代表该地区政策已收齐。",
+  "time_scope": {
+    "start_date": "2023-01-01",
+    "end_date": "run_date",
+    "note": "end_date 为运行当天实际日期，不预先写死；初始历史采集目标 2026-11-19。"
+  },
+  "years": [2023, 2024, 2025, 2026],
+  "regions": {
+    "source": "data/regions.json",
+    "count": 26,
+    "pilot": ["320000", "330000", "320100"],
+    "pilot_note": "先对江苏、浙江省级来源与 2A 已核验的城市来源试点，再逐步扩展；未完成地区如实列在清单中。"
+  },
+  "keywords": [
+    "人工智能教育",
+    "AI赋能教育",
+    "人工智能通识教育",
+    "智能教育",
+    "教育大模型",
+    "教师AI素养",
+    "人工智能+教育",
+    "生成式人工智能教育应用"
+  ],
+  "explicit_targets": [
+    {
+      "purpose": "阶段二 测试一：江苏省政策原文",
+      "url": "https://jyt.jiangsu.gov.cn/art/2025/5/9/art_58320_11561838.html",
+      "expected_title": "人工智能赋能教育高质量发展行动方案（2025—2027年）",
+      "region_code": "320000",
+      "status": "用户提供，未核验",
+      "note": "仅作采集输入；站点本身在 2A 仍为「待核验」，不得因此自动取得已核验身份。"
+    },
+    {
+      "purpose": "阶段二 测试二：南京市官方转载",
+      "url": "https://edu.nanjing.gov.cn/njsjyj/202506/t20250604_5577484.html",
+      "expected_title": null,
+      "region_code": "320100",
+      "status": "用户提供，未核验",
+      "note": "目标为确认转载不生成新的南京市政策实体；expected_title 未知，保留 NULL，禁止推测。"
+    },
+    {
+      "purpose": "阶段二 测试三：浙江省官方渠道政策全文",
+      "url": "https://www.zjzs.net/art/2025/4/29/art_320_11097.html",
+      "expected_title": "浙江省推进“人工智能+教育”行动方案（2025—2029年）",
+      "region_code": "330000",
+      "status": "用户提供，未核验",
+      "note": "浙江省教育考试院为直属事业机构；原始发文机关与原始发布页面待查，找不到时只记官方渠道全文/转载，不得臆造原件链接。"
+    }
+  ],
+  "rate_limit": {
+    "min_interval_seconds": 1.5,
+    "max_batch_size": 5,
+    "timeout_seconds": 15,
+    "retries": 2,
+    "no_retry_on": [401, 403, 404],
+    "note": "不绕过验证码、登录或访问限制；403/401/404 直接记录失败原因，不重试、不绕行。"
+  },
+  "coverage_semantics": {
+    "not_searched": "未检索",
+    "searched": "已检索（不代表政策已收齐）",
+    "to_verify": "待核验",
+    "verified": "已核验",
+    "restricted": "检索受限"
+  }
+}

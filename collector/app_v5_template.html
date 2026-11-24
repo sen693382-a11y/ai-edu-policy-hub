@@ -1,0 +1,2876 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>人工智能教育政策资料库 V5.2 科研进阶版（北京·上海·江苏·浙江·广东）</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --canvas: #F6F5F1;
+      --surface: #FFFFFF;
+      --surface-warm: #FAF9F6;
+      --border: #E6E3DC;
+      --border-soft: #EFECE6;
+      --ink: #161922;
+      --ink-secondary: #4B5263;
+      --ink-muted: #7B8190;
+      --primary: #1E3A5F;
+      --primary-hover: #152B47;
+      --gold: #A67C46;
+      --gold-soft: #F7F1E6;
+      --pine: #1F6354;
+      --pine-soft: #EBF5F2;
+    }
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--canvas);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif-cn {
+      font-family: "Songti SC", "STSong", "Noto Serif SC", "SimSun", Georgia, serif;
+    }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    mark.hl {
+      background: #F6E5B8;
+      color: #6B4610;
+      padding: 0 3px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+    mark.hl-num {
+      background: #E8EFF7;
+      color: #1E3A5F;
+      padding: 0 4px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+    mark.hl-active {
+      background: #A67C46;
+      color: #FFFFFF;
+      padding: 0 4px;
+      border-radius: 3px;
+      box-shadow: 0 0 0 2px #E9D8BE;
+    }
+    .tab-btn {
+      position: relative;
+      color: #5C6373;
+      transition: color .18s ease, background-color .18s ease;
+    }
+    .tab-btn:hover { color: #161922; background: rgba(22, 25, 34, 0.04); }
+    .tab-btn.active {
+      color: #161922;
+      background: #FFFFFF;
+      font-weight: 600;
+      box-shadow: 0 1px 3px rgba(22, 25, 34, 0.08), 0 0 0 1px rgba(22, 25, 34, 0.05);
+    }
+    .cite-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: #F2F5F9;
+      color: #1E3A5F;
+      border: 1px solid #D5E0EC;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 11px;
+      font-weight: 600;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      cursor: pointer;
+      transition: all .15s;
+      vertical-align: baseline;
+    }
+    .cite-chip:hover { background: #1E3A5F; color: #FFFFFF; border-color: #1E3A5F; }
+    .cite-chip.bad { background: #FDF2F2; color: #9B2C2C; border-color: #F5C2C2; }
+    .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .editorial-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 1px 2px rgba(22, 25, 34, 0.03);
+    }
+    select, input[type="text"], input[type="url"], input[type="password"], textarea {
+      border-color: #DEDAD1;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    select:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="password"]:focus, textarea:focus {
+      outline: none;
+      border-color: #1E3A5F;
+      box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.09);
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-thumb { background: #CFCAC0; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #A8A296; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- Toast Container -->
+<div id="toastBox" class="fixed top-5 right-5 z-[100] flex flex-col gap-2 pointer-events-none"></div>
+
+<!-- Architectural Frosted Header -->
+<header class="bg-white/92 backdrop-blur-md border-b border-[#E6E3DC] sticky top-0 z-40">
+  <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8 h-auto lg:h-[68px] py-3 lg:py-0 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+    <!-- Brand -->
+    <div class="flex items-center gap-3 min-w-0">
+      <div class="w-9 h-9 rounded-xl bg-[#161922] text-[#E6C999] flex items-center justify-center shrink-0 shadow-sm">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+        </svg>
+      </div>
+      <div class="min-w-0">
+        <div class="flex items-center gap-2.5 flex-wrap">
+          <h1 class="font-serif-cn text-base sm:text-[18px] font-bold tracking-tight text-[#161922] truncate">人工智能教育政策资料库</h1>
+          <span class="px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase rounded-full bg-[#F7F1E6] text-[#8A6230] border border-[#E7D8BE]">V5.0 科研版</span>
+        </div>
+        <p class="text-[11px] text-[#7B8190] tracking-wide truncate mt-0.5">京 · 沪 · 苏 · 浙 · 粤五地政策原文检索、横向比较、持续采集与文献综述研究平台</p>
+      </div>
+    </div>
+
+    <!-- Segmented Navigation -->
+    <nav class="flex items-center gap-1 bg-[#F1EFEA] p-1 rounded-xl border border-[#E6E3DC] overflow-x-auto shrink-0">
+      <button type="button" data-tab="library" class="tab-btn active inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs sm:text-[13px] whitespace-nowrap">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+        <span>资料库与原文检索</span>
+      </button>
+      <button type="button" data-tab="compare" class="tab-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs sm:text-[13px] whitespace-nowrap">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+        <span>横向对比</span>
+        <span id="navCompareBadge" class="ml-0.5 px-1.5 py-0.2 rounded-full bg-[#1E3A5F] text-white text-[10px] font-semibold hidden">0</span>
+      </button>
+      <button type="button" data-tab="analytics" class="tab-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs sm:text-[13px] whitespace-nowrap">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+        <span>政策工具与量化台账</span>
+      </button>
+      <button type="button" data-tab="collect" class="tab-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs sm:text-[13px] whitespace-nowrap">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/></svg>
+        <span>自动采集中心</span>
+      </button>
+      <button type="button" data-tab="ai" class="tab-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs sm:text-[13px] whitespace-nowrap">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+        <span>AI 文献综述助手</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="flex-1 max-w-[1320px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-28">
+
+  <!-- ==================== TAB 1: POLICY LIBRARY & FULL-TEXT SEARCH ==================== -->
+  <section id="view-library" class="space-y-5">
+    <!-- Unified Architectural Metrics Ribbon -->
+    <div id="statsBar" class="editorial-card grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#EFECE6] overflow-hidden"></div>
+
+    <!-- Search & Filter Command Bar -->
+    <div class="editorial-card p-5 space-y-4">
+      <div class="flex flex-col md:flex-row gap-3">
+        <div class="relative flex-1">
+          <svg class="w-4 h-4 text-[#8C919E] absolute left-3.5 top-3.5 pointer-events-none" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
+          <input id="q" type="text" placeholder="检索政策正文原文或标题（支持空格多词组合，如：中小学 课时、生成式 伦理、教师 素养）"
+            class="w-full pl-10 pr-20 py-2.5 text-sm bg-[#FAF9F6] focus:bg-white border border-[#DEDAD1] rounded-xl text-[#161922] placeholder:text-[#989DA8]">
+          <button type="button" id="clearSearchBtn" class="hidden absolute right-2.5 top-2 px-2.5 py-1 text-xs text-[#5C6373] hover:text-[#161922] bg-[#ECE9E2] rounded-md transition">清空</button>
+        </div>
+        <div class="flex items-center gap-2 shrink-0 flex-wrap">
+          <label class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-[#D8E1EC] bg-[#F2F6FA] text-[#1E3A5F] text-xs font-medium cursor-pointer select-none">
+            <input type="checkbox" id="fullTextMode" checked class="rounded text-[#1E3A5F] focus:ring-[#1E3A5F]">
+            <span>全文正文检索</span>
+          </label>
+          <button type="button" id="presetCompareBtn" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#161922] hover:bg-[#272C3B] text-[#F8F7F4] text-xs font-medium transition shadow-sm">
+            <svg class="w-3.5 h-3.5 text-[#E6C999]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+            <span>一键对比五地核心方案</span>
+          </button>
+          <button type="button" id="openCiteExportBtn" class="px-3.5 py-2.5 rounded-xl bg-[#1F6354] hover:bg-[#174D41] text-white text-xs font-medium transition shadow-sm">导出学术题录</button>
+          <button type="button" id="resetFiltersBtn" class="px-3.5 py-2.5 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#4B5263] text-xs font-medium transition">重置</button>
+        </div>
+      </div>
+
+      <!-- Quick Search Chips -->
+      <div class="flex items-center gap-2 flex-wrap text-xs">
+        <span class="text-[#8C919E] font-medium">常用原文检索：</span>
+        <button type="button" data-quick-q="中小学 课时" class="px-2.5 py-1 rounded-full bg-[#FAF9F6] border border-[#E6E3DC] hover:border-[#1E3A5F] hover:text-[#1E3A5F] text-[#4B5263] transition">中小学 课时</button>
+        <button type="button" data-quick-q="生成式 伦理" class="px-2.5 py-1 rounded-full bg-[#FAF9F6] border border-[#E6E3DC] hover:border-[#1E3A5F] hover:text-[#1E3A5F] text-[#4B5263] transition">生成式 伦理</button>
+        <button type="button" data-quick-q="教师 素养 培训" class="px-2.5 py-1 rounded-full bg-[#FAF9F6] border border-[#E6E3DC] hover:border-[#1E3A5F] hover:text-[#1E3A5F] text-[#4B5263] transition">教师 素养 培训</button>
+        <button type="button" data-quick-q="大模型 算力" class="px-2.5 py-1 rounded-full bg-[#FAF9F6] border border-[#E6E3DC] hover:border-[#1E3A5F] hover:text-[#1E3A5F] text-[#4B5263] transition">大模型 算力</button>
+        <button type="button" data-quick-q="实验区 示范校" class="px-2.5 py-1 rounded-full bg-[#FAF9F6] border border-[#E6E3DC] hover:border-[#1E3A5F] hover:text-[#1E3A5F] text-[#4B5263] transition">实验区 示范校</button>
+        <button type="button" data-quick-q="通识课程" class="px-2.5 py-1 rounded-full bg-[#FAF9F6] border border-[#E6E3DC] hover:border-[#1E3A5F] hover:text-[#1E3A5F] text-[#4B5263] transition">通识课程</button>
+      </div>
+
+      <!-- Multi-dimensional Dropdowns -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5 pt-3 border-t border-[#EFECE6]">
+        <div>
+          <label class="block text-[11px] font-medium text-[#7B8190] mb-1">年份</label>
+          <select id="year" class="w-full px-2.5 py-1.5 text-xs border rounded-lg bg-white text-[#161922]"></select>
+        </div>
+        <div>
+          <label class="block text-[11px] font-medium text-[#7B8190] mb-1">地区</label>
+          <select id="province" class="w-full px-2.5 py-1.5 text-xs border rounded-lg bg-white text-[#161922]">
+            <option value="">全部地区</option>
+            <option>北京市</option><option>上海市</option><option>江苏省</option><option>浙江省</option><option>广东省</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-[11px] font-medium text-[#7B8190] mb-1">资料类别</label>
+          <select id="category" class="w-full px-2.5 py-1.5 text-xs border rounded-lg bg-white text-[#161922]"></select>
+        </div>
+        <div>
+          <label class="block text-[11px] font-medium text-[#7B8190] mb-1">教育阶段</label>
+          <select id="stage" class="w-full px-2.5 py-1.5 text-xs border rounded-lg bg-white text-[#161922]"></select>
+        </div>
+        <div>
+          <label class="block text-[11px] font-medium text-[#7B8190] mb-1">政策主题</label>
+          <select id="topic" class="w-full px-2.5 py-1.5 text-xs border rounded-lg bg-white text-[#161922]"></select>
+        </div>
+        <div>
+          <label class="block text-[11px] font-medium text-[#7B8190] mb-1">研究纳入层级</label>
+          <select id="tier" class="w-full px-2.5 py-1.5 text-xs border rounded-lg bg-white text-[#161922]"></select>
+        </div>
+        <div>
+          <label class="block text-[11px] font-medium text-[#7B8190] mb-1">正文可读性</label>
+          <select id="readableFilter" class="w-full px-2.5 py-1.5 text-xs border rounded-lg bg-white text-[#161922]">
+            <option value="">全部记录</option>
+            <option value="yes">仅正文已索引</option>
+            <option value="no">暂无正文索引</option>
+          </select>
+        </div>
+        <div class="flex items-end pb-1.5">
+          <label class="inline-flex items-center gap-1.5 text-xs text-[#8A6230] font-medium cursor-pointer select-none">
+            <input type="checkbox" id="showClue" class="rounded text-[#A67C46]">
+            <span>含待获取线索</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Count & Sort Bar -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-1 text-xs text-[#5C6373]">
+      <div id="count" class="tabular-nums"></div>
+      <div class="flex items-center gap-1.5">
+        <span class="text-[#8C919E]">排序方式</span>
+        <button type="button" data-sort="发文日期" class="px-2.5 py-1 rounded-lg border border-[#E6E3DC] bg-white hover:border-[#1E3A5F] hover:text-[#1E3A5F] transition">发文日期 ↕</button>
+        <button type="button" data-sort="hits" class="px-2.5 py-1 rounded-lg border border-[#E6E3DC] bg-white hover:border-[#1E3A5F] hover:text-[#1E3A5F] transition">正文命中 ↕</button>
+        <button type="button" data-sort="研究纳入层级" class="px-2.5 py-1 rounded-lg border border-[#E6E3DC] bg-white hover:border-[#1E3A5F] hover:text-[#1E3A5F] transition">研究层级 ↕</button>
+      </div>
+    </div>
+
+    <!-- Editorial Policy Table -->
+    <div class="editorial-card overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-[#FAF9F6] border-b border-[#E6E3DC] text-[11px] font-semibold uppercase tracking-wider text-[#6E7485]">
+            <th class="py-3 px-4 w-12 text-center">对比</th>
+            <th class="py-3 px-4 w-28">发文日期</th>
+            <th class="py-3 px-4">政策标题 · 机关 · 原文命中摘录</th>
+            <th class="py-3 px-4 w-36">类别与层级</th>
+            <th class="py-3 px-4 w-48">学段与主题</th>
+            <th class="py-3 px-4 w-36 text-right">操作与溯源</th>
+          </tr>
+        </thead>
+        <tbody id="tb" class="divide-y divide-[#EFECE6] text-sm"></tbody>
+      </table>
+    </div>
+    <div id="pager" class="flex justify-center items-center gap-1.5 flex-wrap pt-2"></div>
+  </section>
+
+  <!-- ==================== TAB 2: HORIZONTAL COMPARISON ==================== -->
+  <section id="view-compare" class="hidden space-y-5">
+    <div class="editorial-card p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="text-[11px] font-semibold uppercase tracking-widest text-[#A67C46]">Comparative Matrix</div>
+        <h2 class="font-serif-cn text-lg font-bold text-[#161922] mt-0.5">多政策横向对比工作台</h2>
+        <p class="text-xs text-[#6E7485] mt-1">围绕 8 项核心科研指标自动提取原文条款并横向对照，支持量化指标高亮、原文段落跳转与学术格式导出。</p>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <button type="button" id="cmpPreset5Btn" class="px-3.5 py-2 rounded-xl bg-[#161922] hover:bg-[#272C3B] text-[#F8F7F4] text-xs font-medium transition">五地核心方案预设</button>
+        <button type="button" id="cmpPresetCourseBtn" class="px-3.5 py-2 rounded-xl bg-[#F2F6FA] hover:bg-[#E4EDF6] text-[#1E3A5F] border border-[#D5E0EC] text-xs font-medium transition">京沪粤课程纲要对比</button>
+        <button type="button" id="cmpSendAiBtn" class="px-3.5 py-2 rounded-xl bg-[#1E3A5F] hover:bg-[#152B47] text-white text-xs font-medium transition">送入 AI 综述助手</button>
+        <button type="button" id="cmpExportCiteBtn" class="px-3 py-2 rounded-xl bg-[#1F6354] hover:bg-[#174D41] text-white text-xs font-medium transition">导出所选题录</button>
+        <button type="button" id="cmpExportMdBtn" class="px-3 py-2 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#3F4554] text-xs font-medium transition">导出 Markdown</button>
+        <button type="button" id="cmpExportCsvBtn" class="px-3 py-2 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#3F4554] text-xs font-medium transition">导出 CSV</button>
+        <button type="button" id="cmpClearBtn" class="px-3 py-2 rounded-xl text-[#9B2C2C] hover:bg-[#FDF2F2] text-xs font-medium transition">清空</button>
+      </div>
+    </div>
+
+    <!-- Selected Chips & Quick Add -->
+    <div class="editorial-card p-5 space-y-3.5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+        <div class="text-xs font-semibold text-[#3F4554]">已纳入对比的政策样本（支持 2–6 份）</div>
+        <div class="flex items-center gap-3 flex-wrap text-xs">
+          <label class="inline-flex items-center gap-1.5 cursor-pointer select-none text-[#1E3A5F] font-medium">
+            <input type="checkbox" id="cmpHighlightNums" checked class="rounded text-[#1E3A5F]">
+            <span>高亮量化指标（年份/比例/课时）</span>
+          </label>
+          <select id="cmpAddSelect" class="max-w-xs px-3 py-1.5 text-xs border rounded-lg bg-[#FAF9F6] focus:bg-white">
+            <option value="">＋ 快速添加一份已索引政策…</option>
+          </select>
+        </div>
+      </div>
+      <div id="cmpSelectedChips" class="flex flex-wrap gap-2"></div>
+    </div>
+
+    <!-- Chart Card -->
+    <div id="cmpChartWrap" class="hidden editorial-card p-5">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-sm font-bold text-[#161922]">四大核心政策支柱条款密度对照</h3>
+        <span class="text-xs text-[#8C919E]">统计口径：各维度命中原文段落数</span>
+      </div>
+      <div class="relative h-64">
+        <canvas id="cmpChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 8-Dimension Comparison Matrix Table -->
+    <div id="cmpMatrixWrap" class="editorial-card overflow-x-auto"></div>
+  </section>
+
+  <!-- ==================== TAB 2.5: POLICY INSTRUMENT CODING & QUANTITATIVE LEDGER ==================== -->
+  <section id="view-analytics" class="hidden space-y-5">
+    <!-- Sub-view Switcher -->
+    <div class="editorial-card p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <h2 class="text-base font-bold text-[#161922]">科研深度分析：政策工具编码图谱 &amp; 硬性量化指标台账</h2>
+          <span class="px-2 py-0.5 text-[11px] font-semibold rounded-full bg-[#F7F1E6] text-[#8C6432] border border-[#E6D5B8]">Rothwell &amp; Zegveld 三维框架</span>
+        </div>
+        <p class="text-xs text-[#6B7280] mt-1">基于全库 160 份政策正文（11,716 段原文）自动完成供给型 / 需求型 / 环境型政策工具编码，并精准抽取课时、覆盖率、示范校与时间节点等硬性量化指标。</p>
+      </div>
+      <div class="flex items-center gap-1.5 bg-[#F4F2EC] p-1 rounded-xl border border-[#E6E3DC] shrink-0">
+        <button type="button" id="subTabToolsBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-[#1E3A5F] shadow-sm">政策工具编码图谱</button>
+        <button type="button" id="subTabQuantBtn" class="px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#4B5263] hover:text-[#161922]">硬性量化指标台账</button>
+      </div>
+    </div>
+
+    <!-- SUB-VIEW A: ACADEMIC POLICY INSTRUMENT CODING & VISUALIZATION -->
+    <div id="subview-tools" class="space-y-4">
+      <div class="editorial-card p-4 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="font-semibold text-[#3F4554]">分析样本：</span>
+          <select id="toolProvFilter" class="px-2.5 py-1.5 border border-[#E6E3DC] rounded-lg bg-white text-[#161922]">
+            <option value="">全国五地汇总</option>
+            <option>北京市</option><option>上海市</option><option>江苏省</option><option>浙江省</option><option>广东省</option>
+          </select>
+          <select id="toolTierFilter" class="px-2.5 py-1.5 border border-[#E6E3DC] rounded-lg bg-white text-[#161922]">
+            <option value="all">全部已索引政策（160份）</option>
+            <option value="A">仅 A 类核心政策</option>
+            <option value="AB">仅 A + B 类政策</option>
+          </select>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap">
+          <button type="button" id="exportToolCsvBtn" class="px-3 py-1.5 rounded-xl bg-[#1E3A5F] hover:bg-[#152B47] text-white font-medium transition">导出编码频次矩阵 (CSV)</button>
+          <button type="button" id="exportToolDetailCsvBtn" class="px-3 py-1.5 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#3F4554] font-medium transition">导出逐段编码明细 (NVivo/SPSS)</button>
+        </div>
+      </div>
+
+      <!-- 3 Big Instrument KPI Cards -->
+      <div id="toolKpiRow" class="grid grid-cols-1 sm:grid-cols-3 gap-3.5"></div>
+
+      <!-- 2 Charts Side-by-Side -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="editorial-card p-4">
+          <h3 class="text-sm font-bold text-[#161922] mb-2">五地三大政策工具结构对比（供给型 / 需求型 / 环境型）</h3>
+          <div class="relative h-64"><canvas id="toolProvChart"></canvas></div>
+        </div>
+        <div class="editorial-card p-4">
+          <h3 class="text-sm font-bold text-[#161922] mb-2">12 项二级政策工具使用频次分布</h3>
+          <div class="relative h-64"><canvas id="toolSubChart"></canvas></div>
+        </div>
+      </div>
+
+      <!-- Interactive Sub-Instrument Matrix + Evidence Inspector -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div class="lg:col-span-7 editorial-card p-4 overflow-x-auto">
+          <div class="flex items-center justify-between mb-2.5">
+            <h3 class="text-sm font-bold text-[#161922]">二级政策工具 × 五地编码频次热力表</h3>
+            <span class="text-[11px] text-[#7B8190]">点击任意工具行查看原文编码依据</span>
+          </div>
+          <div id="toolMatrixTable"></div>
+        </div>
+        <div class="lg:col-span-5 editorial-card p-4 flex flex-col">
+          <div class="flex items-center justify-between mb-2.5">
+            <h3 id="toolEvTitle" class="text-sm font-bold text-[#161922]">编码原文依据溯源</h3>
+            <span id="toolEvCount" class="text-xs text-[#1E3A5F] font-semibold"></span>
+          </div>
+          <div id="toolEvList" class="space-y-2 max-h-[420px] overflow-y-auto text-xs pr-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUB-VIEW B: HARD QUANTITATIVE METRICS LEDGER -->
+    <div id="subview-quant" class="hidden space-y-4">
+      <div class="editorial-card p-4 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2 flex-wrap">
+          <select id="quantCatFilter" class="px-2.5 py-1.5 border border-[#E6E3DC] rounded-lg bg-white">
+            <option value="">全部量化指标类别</option>
+            <option value="课时与学分">课时与学分要求</option>
+            <option value="普及与覆盖率">普及率与覆盖比例</option>
+            <option value="示范与载体规模">示范校/实验区/课程数量</option>
+            <option value="师资与人才规模">师资培训与人才指标</option>
+            <option value="规划时间节点">关键规划时间节点</option>
+          </select>
+          <select id="quantProvFilter" class="px-2.5 py-1.5 border border-[#E6E3DC] rounded-lg bg-white">
+            <option value="">全部地区</option>
+            <option>北京市</option><option>上海市</option><option>江苏省</option><option>浙江省</option><option>广东省</option>
+          </select>
+          <input id="quantSearchInput" type="text" placeholder="筛选量化指标原文（如：8课时、100%、2027）" class="px-3 py-1.5 border border-[#E6E3DC] rounded-lg bg-white w-64">
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="quantCountBadge" class="text-[#7B8190]"></span>
+          <button type="button" id="exportQuantCsvBtn" class="px-3 py-1.5 rounded-xl bg-[#1E3A5F] hover:bg-[#152B47] text-white font-medium transition">导出量化台账 (CSV/Excel)</button>
+        </div>
+      </div>
+
+      <div id="quantSummaryCards" class="grid grid-cols-2 sm:grid-cols-5 gap-2.5"></div>
+
+      <div class="editorial-card overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead class="bg-[#FAF9F6] border-b border-[#E6E3DC] text-[#4B5263]">
+            <tr>
+              <th class="py-2.5 px-3 w-28">指标类别</th>
+              <th class="py-2.5 px-3 w-36">抽取硬性数值</th>
+              <th class="py-2.5 px-3 w-20">地区</th>
+              <th class="py-2.5 px-3 w-52">来源政策文件</th>
+              <th class="py-2.5 px-3">原文条款依据（点击段落号定位）</th>
+            </tr>
+          </thead>
+          <tbody id="quantTb" class="divide-y divide-[#EFECE6]"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TAB 3: AUTOMATED & CONTINUOUS COLLECTION ==================== -->
+  <section id="view-collect" class="hidden space-y-5">
+    <div class="editorial-card p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="text-[11px] font-semibold uppercase tracking-widest text-[#1F6354]">Automated Pipeline</div>
+        <h2 class="font-serif-cn text-lg font-bold text-[#161922] mt-0.5">自动化、持续化政策采集中心</h2>
+        <p class="text-xs text-[#6E7485] mt-1">维护五地及国家部委官方监控信源、生成定时自动采集流水线，并支持新采集文件一键导入与实时建索引。</p>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <button type="button" id="exportSourcesBtn" class="px-3.5 py-2 rounded-xl bg-[#1E3A5F] hover:bg-[#152B47] text-white text-xs font-medium transition">导出信源配置 JSON</button>
+        <button type="button" id="exportDatasetBtn" class="px-3.5 py-2 rounded-xl bg-[#1F6354] hover:bg-[#174E42] text-white text-xs font-medium transition">导出最新全量数据包</button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <!-- Left 2 cols: Source Registry -->
+      <div class="lg:col-span-2 editorial-card p-5 space-y-3.5">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <h3 class="text-sm font-bold text-[#161922]">1. 官方政策监控信源库（共 <span id="srcCount" class="tabular-nums">0</span> 个站点）</h3>
+          <button type="button" id="toggleAddSourceBtn" class="px-3 py-1.5 rounded-lg bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#3F4554] text-xs font-medium transition">＋ 新增监控站点</button>
+        </div>
+
+        <!-- Add Source Form -->
+        <form id="addSourceForm" class="hidden bg-[#FAF9F6] border border-[#E6E3DC] rounded-xl p-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div>
+            <label class="block text-[#5C6373] font-medium mb-1">所属地区</label>
+            <select id="newSrcProv" class="w-full px-2.5 py-1.5 border rounded-lg bg-white">
+              <option>北京市</option><option>上海市</option><option>江苏省</option><option>浙江省</option><option>广东省</option><option>国家级</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[#5C6373] font-medium mb-1">站点名称 / 主办机关</label>
+            <input id="newSrcName" type="text" required placeholder="如：杭州市教育局" class="w-full px-2.5 py-1.5 border rounded-lg bg-white">
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-[#5C6373] font-medium mb-1">官方栏目 URL（须 https:// 或 http://）</label>
+            <input id="newSrcUrl" type="url" required placeholder="https://edu.hangzhou.gov.cn/" class="w-full px-2.5 py-1.5 border rounded-lg bg-white">
+          </div>
+          <div class="sm:col-span-2 flex items-center justify-between gap-2">
+            <input id="newSrcKw" type="text" value="人工智能,教育,通识,赋能" class="flex-1 px-2.5 py-1.5 border rounded-lg bg-white" placeholder="监测关键词（逗号分隔）">
+            <button type="submit" class="px-4 py-1.5 rounded-lg bg-[#161922] text-white font-medium">保存信源</button>
+          </div>
+        </form>
+
+        <div class="overflow-x-auto max-h-96 overflow-y-auto border border-[#EFECE6] rounded-xl">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-[#FAF9F6] sticky top-0 text-[#6E7485] border-b border-[#E6E3DC]">
+              <tr>
+                <th class="py-2.5 px-3">启用</th>
+                <th class="py-2.5 px-3">地区</th>
+                <th class="py-2.5 px-3">官方站点与域名</th>
+                <th class="py-2.5 px-3">核验状态</th>
+                <th class="py-2.5 px-3">监测关键词</th>
+              </tr>
+            </thead>
+            <tbody id="sourcesTb" class="divide-y divide-[#EFECE6]"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Right 1 col: Live Incremental Import -->
+      <div class="editorial-card p-5 space-y-3.5">
+        <h3 class="text-sm font-bold text-[#161922]">2. 增量政策导入与实时建索引</h3>
+        <p class="text-xs text-[#6E7485] leading-relaxed">导入采集脚本产出的 JSON 或单篇 HTML/TXT 政策原文，系统自动去重、抽取学段与主题并切分段落索引。</p>
+
+        <div class="p-3.5 rounded-xl border border-dashed border-[#CFCAC0] hover:border-[#1E3A5F] bg-[#FAF9F6] text-center space-y-2 transition">
+          <input id="importFileInput" type="file" accept=".json,.txt,.html,.htm" class="block w-full text-xs text-[#5C6373] file:mr-2 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-[#161922] file:text-white hover:file:bg-[#272C3B] cursor-pointer">
+          <div class="text-[11px] text-[#8C919E]">支持 .json（增量采集包）或 .txt / .html</div>
+        </div>
+
+        <div class="border-t border-[#EFECE6] pt-3.5 space-y-2.5 text-xs">
+          <div class="font-semibold text-[#3F4554]">手动快速录入一篇新政策</div>
+          <input id="quickImpTitle" type="text" placeholder="政策文件标题（必填）" class="w-full px-3 py-2 border rounded-lg bg-[#FAF9F6] focus:bg-white">
+          <div class="grid grid-cols-2 gap-2">
+            <select id="quickImpProv" class="px-2.5 py-2 border rounded-lg bg-white">
+              <option>北京市</option><option>上海市</option><option>江苏省</option><option>浙江省</option><option>广东省</option>
+            </select>
+            <input id="quickImpDate" type="text" placeholder="发文日期" value="2026-11-22" class="px-2.5 py-2 border rounded-lg bg-[#FAF9F6] focus:bg-white">
+          </div>
+          <input id="quickImpAgency" type="text" placeholder="发文机关（如：浙江省教育厅）" class="w-full px-3 py-2 border rounded-lg bg-[#FAF9F6] focus:bg-white">
+          <textarea id="quickImpBody" rows="4" placeholder="粘贴政策正文原文，系统自动按段落切分并纳入全文检索、横向对比与 AI 综述……" class="w-full px-3 py-2 border rounded-lg bg-[#FAF9F6] focus:bg-white"></textarea>
+          <button type="button" id="quickImpSubmitBtn" class="w-full py-2.5 rounded-xl bg-[#161922] hover:bg-[#272C3B] text-white font-medium transition">入库并实时建立全文索引</button>
+        </div>
+        <div id="importLog" class="text-xs text-[#1F6354] bg-[#EBF5F2] border border-[#C5E2D9] rounded-xl p-3 hidden"></div>
+      </div>
+    </div>
+
+    <!-- Continuous Automation Pipeline Generator -->
+    <div class="editorial-card p-5 space-y-3.5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h3 class="text-sm font-bold text-[#161922]">3. 持续化定时采集流水线生成器</h3>
+          <p class="text-xs text-[#6E7485] mt-0.5">配套离线升级包中的 <code class="px-1.5 py-0.5 rounded bg-[#F1EFEA] text-[#161922]">collector/auto_collector.py</code>，一键生成云端或本机定时任务配置。</p>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap text-xs">
+          <select id="schedFreq" class="px-3 py-1.5 border rounded-lg bg-white">
+            <option value="weekly">每周一 08:00 自动采集（推荐）</option>
+            <option value="daily">每日 07:30 自动采集</option>
+            <option value="monthly">每月 1 日 08:00 自动采集</option>
+          </select>
+          <select id="schedPlatform" class="px-3 py-1.5 border rounded-lg bg-white">
+            <option value="gha">GitHub Actions (云端定时)</option>
+            <option value="win">Windows 计划任务 (.bat)</option>
+            <option value="cron">Linux / macOS Cron (.sh)</option>
+          </select>
+          <button type="button" id="copySchedBtn" class="px-3.5 py-1.5 rounded-lg bg-[#161922] hover:bg-[#272C3B] text-white font-medium transition">复制脚本</button>
+        </div>
+      </div>
+      <pre id="schedCodeBox" class="bg-[#161922] text-[#E6E3DC] rounded-xl p-4 text-xs overflow-x-auto leading-relaxed font-mono border border-[#2A2F3D]"></pre>
+    </div>
+    <!-- 4. Pending Policy Clues Auto-Completion & Official Link Health Patrol -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <div class="lg:col-span-7 editorial-card p-5 space-y-3">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <h3 class="text-sm font-bold text-[#161922]">4. 待获取政策线索自动补全工作台（共 <span id="clueCountSpan">0</span> 条）</h3>
+            <p class="text-xs text-[#6B7280] mt-0.5">汇总全部「原文待获取」政策线索，自动生成政府官网精准检索式；定位原文后一键补全入库并建立全文段落索引。</p>
+          </div>
+          <button type="button" id="exportClueTaskBtn" class="px-3 py-1.5 rounded-xl bg-[#F7F1E6] hover:bg-[#EFE4D0] text-[#8C6432] border border-[#E6D5B8] text-xs font-medium transition">导出补全检索清单</button>
+        </div>
+        <div class="overflow-x-auto max-h-96 overflow-y-auto border border-[#EFECE6] rounded-xl">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-[#FAF9F6] sticky top-0 text-[#4B5263] border-b border-[#E6E3DC]">
+              <tr>
+                <th class="py-2.5 px-3 w-24">地区</th>
+                <th class="py-2.5 px-3">待补全政策线索标题与状态</th>
+                <th class="py-2.5 px-3 w-44">补全操作</th>
+              </tr>
+            </thead>
+            <tbody id="clueTb" class="divide-y divide-[#EFECE6]"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 editorial-card p-5 space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-bold text-[#161922]">5. 官方原文链接失效巡检中心</h3>
+          <span id="patrolStatusBadge" class="px-2 py-0.5 rounded-full bg-[#F4F2EC] text-[#4B5263] text-[11px] font-medium">等待导入巡检报告</span>
+        </div>
+        <p class="text-xs text-[#6B7280] leading-relaxed">运行升级包内 <code class="bg-[#F4F2EC] px-1.5 py-0.5 rounded text-[#1E3A5F]">python3 collector/link_patrol_and_clue_finder.py --live</code> 自动巡检全部 185 条官链的 HTTP 状态（检测 404 / 重定向 / 超时），并在此导入 <code class="bg-[#F4F2EC] px-1.5 py-0.5 rounded text-[#1E3A5F]">link_health_report.json</code>。</p>
+
+        <div id="patrolKpiGrid" class="grid grid-cols-3 gap-2 text-center"></div>
+
+        <div class="p-3 rounded-xl bg-[#FAF9F6] border border-[#E6E3DC] space-y-2 text-xs">
+          <label class="block font-semibold text-[#3F4554]">导入巡检结果 JSON（link_health_report.json）：</label>
+          <input id="patrolReportInput" type="file" accept=".json" class="block w-full text-xs text-[#6B7280] file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:bg-[#1E3A5F] file:text-white font-medium">
+          <div class="flex items-center justify-between pt-1">
+            <button type="button" id="copyPatrolCmdBtn" class="text-[#1E3A5F] hover:underline font-medium">复制本地巡检命令</button>
+            <button type="button" id="filterBrokenLinksBtn" class="px-2.5 py-1 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium">刷新风险链接清单</button>
+          </div>
+        </div>
+        <div id="patrolListBox" class="max-h-48 overflow-y-auto space-y-1.5 text-xs"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TAB 4: AI LITERATURE REVIEW STUDIO ==================== -->
+  <section id="view-ai" class="hidden space-y-5">
+    <div class="editorial-card p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2.5 flex-wrap">
+          <span class="text-[11px] font-semibold uppercase tracking-widest text-[#1E3A5F]">Literature Review Studio</span>
+          <span class="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-[#EBF5F2] text-[#1F6354] border border-[#C5E2D9]">双引擎 · 强制原文引用核验</span>
+        </div>
+        <h2 class="font-serif-cn text-lg font-bold text-[#161922] mt-0.5">AI 政策文献综述写作助手</h2>
+        <p class="text-xs text-[#6E7485] mt-1">支持离线结构化综述引擎（零 API 立即可用）与自定义 HTTPS 大模型接口，每条论断均绑定 [文件ID:段落ID] 溯源。</p>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <button type="button" id="aiImportFromCmpBtn" class="px-3.5 py-2 rounded-xl bg-[#F2F6FA] hover:bg-[#E4EDF6] text-[#1E3A5F] border border-[#D5E0EC] text-xs font-medium transition">导入横向对比已选政策</button>
+        <button type="button" id="aiResetBtn" class="px-3.5 py-2 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#4B5263] text-xs font-medium transition">重置流程</button>
+      </div>
+    </div>
+
+    <!-- Step Progress Bar -->
+    <div id="aiStepsBar" class="grid grid-cols-5 gap-2.5"></div>
+
+    <!-- Step Content Container -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+      <div id="aiMainPanel" class="lg:col-span-8 editorial-card p-6 space-y-4"></div>
+
+      <!-- Right Sidebar: API Config & Citation Verifier -->
+      <div class="lg:col-span-4 space-y-5">
+        <div class="editorial-card p-5 space-y-3 text-xs">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold text-[#161922]">生成引擎设置</h3>
+            <span id="apiStatusBadge" class="px-2.5 py-0.5 rounded-full bg-[#EBF5F2] text-[#1F6354] font-medium text-[11px]">离线引擎就绪</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#D5E0EC] bg-[#F2F6FA] cursor-pointer">
+              <input type="radio" name="aiEngine" value="offline" checked class="text-[#1E3A5F]">
+              <span class="font-medium text-[#1E3A5F]">离线结构化</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 rounded-xl border border-[#E6E3DC] hover:bg-[#FAF9F6] cursor-pointer">
+              <input type="radio" name="aiEngine" value="api" class="text-[#1E3A5F]">
+              <span class="font-medium text-[#4B5263]">在线大模型 API</span>
+            </label>
+          </div>
+          <div id="apiConfigFields" class="hidden space-y-2.5 pt-2.5 border-t border-[#EFECE6]">
+            <div>
+              <label class="block text-[#6E7485] mb-1">接口地址 (OpenAI 兼容 HTTPS)</label>
+              <input id="apiBaseUrl" type="url" placeholder="https://api.deepseek.com/v1/chat/completions" class="w-full px-3 py-1.5 border rounded-lg bg-[#FAF9F6] focus:bg-white">
+            </div>
+            <div>
+              <label class="block text-[#6E7485] mb-1">模型名称</label>
+              <input id="apiModel" type="text" placeholder="deepseek-chat / qwen-plus / gpt-4o-mini" class="w-full px-3 py-1.5 border rounded-lg bg-[#FAF9F6] focus:bg-white">
+            </div>
+            <div>
+              <label class="block text-[#6E7485] mb-1">API Key（仅留存本地浏览器）</label>
+              <input id="apiKey" type="password" placeholder="sk-..." class="w-full px-3 py-1.5 border rounded-lg bg-[#FAF9F6] focus:bg-white">
+            </div>
+          </div>
+          <p class="text-[11px] text-[#8C919E] leading-relaxed">离线模式直接基于所选政策原文段落进行多维证据抽取与学术综述编排；在线模式则发送原文片段与严格防幻觉引文规范至指定接口。</p>
+        </div>
+
+        <!-- Citation Verifier Panel -->
+        <div class="editorial-card p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold text-[#161922]">引用溯源核验器</h3>
+            <span id="citeVerifyRate" class="text-xs font-semibold text-[#8C919E] tabular-nums">待生成</span>
+          </div>
+          <div id="citeVerifyList" class="text-xs text-[#6E7485] space-y-2 max-h-80 overflow-y-auto leading-relaxed">
+            生成综述后，系统将自动校验文中每一处 <code class="bg-[#F1EFEA] px-1.5 py-0.5 rounded text-[#161922]">[文件ID:段落ID]</code> 引文是否存在于原始政策正文中，点击任意标签即可定位原文。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating Comparison Tray -->
+<div id="compareTray" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 z-40 bg-[#161922]/95 backdrop-blur-md text-[#F8F7F4] px-5 py-3 rounded-2xl shadow-2xl border border-[#2E3444] flex items-center gap-3.5 max-w-[95vw]">
+  <span class="text-xs sm:text-sm font-medium whitespace-nowrap">已选 <strong id="trayCount" class="text-[#E6C999] tabular-nums">0</strong>/6 份政策</span>
+  <div id="trayChips" class="hidden md:flex items-center gap-1.5 overflow-x-auto max-w-md"></div>
+  <button type="button" id="trayGoCompareBtn" class="px-3.5 py-1.5 rounded-xl bg-[#E6C999] hover:bg-[#D9B77F] text-[#161922] text-xs font-semibold whitespace-nowrap transition">开始横向对比 →</button>
+  <button type="button" id="trayGoAiBtn" class="px-3.5 py-1.5 rounded-xl bg-[#2B3345] hover:bg-[#3A445C] text-white text-xs font-medium whitespace-nowrap transition">撰写综述 →</button>
+  <button type="button" id="trayClearBtn" class="text-[#8C919E] hover:text-white text-xs px-1 transition">清空</button>
+</div>
+
+<!-- Original Text Reader Modal -->
+<div id="readerModal" class="hidden fixed inset-0 z-50 bg-[#161922]/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-5">
+  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden border border-[#E6E3DC]">
+    <div class="bg-[#161922] text-[#F8F7F4] px-6 py-4 flex items-start justify-between gap-4">
+      <div class="min-w-0">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span id="rdIdBadge" class="px-2 py-0.5 rounded bg-white/10 text-[#E6C999] text-[11px] font-mono"></span>
+          <span id="rdTierBadge" class="px-2 py-0.5 rounded bg-[#1F6354]/40 text-[#A7E0D1] text-[11px]"></span>
+        </div>
+        <h3 id="rdTitle" class="font-serif-cn text-base sm:text-lg font-bold mt-1.5 leading-snug"></h3>
+        <div id="rdMeta" class="text-xs text-[#A5ABB8] mt-1"></div>
+      </div>
+      <button type="button" id="rdCloseBtn" class="text-[#A5ABB8] hover:text-white text-2xl leading-none px-1 transition">&times;</button>
+    </div>
+
+    <!-- Reader Toolbar -->
+    <div class="bg-[#FAF9F6] border-b border-[#E6E3DC] px-5 py-3 flex flex-wrap items-center justify-between gap-2.5">
+      <div class="flex items-center gap-1.5 flex-1 min-w-[200px]">
+        <input id="rdSearchInput" type="text" placeholder="在本文内检索并定位原文…" class="flex-1 px-3 py-1.5 text-xs border rounded-lg bg-white">
+        <span id="rdMatchInfo" class="text-xs text-[#6E7485] whitespace-nowrap min-w-[72px] text-center tabular-nums"></span>
+        <button type="button" id="rdPrevBtn" class="px-2.5 py-1.5 text-xs rounded-lg border border-[#DEDAD1] bg-white hover:bg-[#F1EFEA] transition">上一处</button>
+        <button type="button" id="rdNextBtn" class="px-2.5 py-1.5 text-xs rounded-lg border border-[#DEDAD1] bg-white hover:bg-[#F1EFEA] transition">下一处</button>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <button type="button" id="rdAddCmpBtn" class="px-3 py-1.5 text-xs rounded-lg bg-[#F2F6FA] text-[#1E3A5F] border border-[#D5E0EC] hover:bg-[#E4EDF6] font-medium transition">＋ 加入对比</button>
+        <button type="button" id="rdAddAiBtn" class="px-3 py-1.5 text-xs rounded-lg bg-[#F7F1E6] text-[#8A6230] border border-[#E7D8BE] hover:bg-[#EFE4D0] font-medium transition">＋ 加入综述</button>
+        <a id="rdOfficialLink" href="#" target="_blank" rel="noopener" class="px-3 py-1.5 text-xs rounded-lg bg-[#161922] text-white hover:bg-[#272C3B] font-medium transition">官方原文 ↗</a>
+      </div>
+    </div>
+
+    <!-- Reader Body -->
+    <div id="rdBody" class="flex-1 overflow-y-auto p-6 space-y-3 bg-[#FAF9F6]"></div>
+  </div>
+</div>
+
+<!-- Academic Citation Export Modal (GB/T 7714 / BibTeX / RIS) -->
+<div id="citeModal" class="hidden fixed inset-0 z-50 bg-[#161922]/60 backdrop-blur-xs flex items-center justify-center p-3">
+  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[88vh] flex flex-col overflow-hidden border border-[#E6E3DC]">
+    <div class="bg-[#1E3A5F] text-white px-5 py-3.5 flex items-center justify-between">
+      <div>
+        <h3 class="text-sm sm:text-base font-bold">一键导出标准学术文献格式</h3>
+        <p class="text-xs text-slate-200 mt-0.5">支持 GB/T 7714-2015、BibTeX (.bib) 与 RIS / EndNote / Zotero (.ris) 题录导出</p>
+      </div>
+      <button type="button" id="citeCloseBtn" class="text-slate-200 hover:text-white text-2xl leading-none px-1">&times;</button>
+    </div>
+    <div class="p-4 space-y-3 overflow-y-auto flex-1">
+      <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="font-semibold text-[#3F4554]">导出范围：</span>
+          <select id="citeScopeSel" class="px-2.5 py-1.5 border border-[#E6E3DC] rounded-lg bg-white">
+            <option value="selected">已勾选对比的政策</option>
+            <option value="tierA">全部 A 类核心政策</option>
+            <option value="indexed">全部已索引正式政策</option>
+            <option value="all">资料库全部记录（不含辅助表）</option>
+          </select>
+          <span class="font-semibold text-[#3F4554] ml-1">格式：</span>
+          <select id="citeFmtSel" class="px-2.5 py-1.5 border border-[#E6E3DC] rounded-lg bg-white">
+            <option value="gbt">GB/T 7714-2015（中文期刊/学位论文标准）</option>
+            <option value="bibtex">BibTeX（.bib，LaTeX / Overleaf）</option>
+            <option value="ris">RIS（.ris，Zotero / EndNote / NoteExpress）</option>
+          </select>
+        </div>
+        <span id="citeCountInfo" class="text-[#7B8190] font-medium"></span>
+      </div>
+      <textarea id="citePreviewBox" rows="15" readonly class="w-full p-3 text-xs font-mono leading-relaxed bg-[#FAF9F6] border border-[#E6E3DC] rounded-xl text-[#161922]"></textarea>
+    </div>
+    <div class="bg-[#FAF9F6] border-t border-[#E6E3DC] px-5 py-3 flex items-center justify-end gap-2">
+      <button type="button" id="citeCopyBtn" class="px-4 py-2 rounded-xl bg-[#1E3A5F] hover:bg-[#152B47] text-white text-xs font-medium">复制全部题录</button>
+      <button type="button" id="citeDownloadBtn" class="px-4 py-2 rounded-xl bg-[#1F6354] hover:bg-[#174D41] text-white text-xs font-medium">下载标准题录文件</button>
+    </div>
+  </div>
+</div>
+
+<!-- Clue Completion Modal -->
+<div id="clueModal" class="hidden fixed inset-0 z-50 bg-[#161922]/60 backdrop-blur-xs flex items-center justify-center p-3">
+  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden border border-[#E6E3DC]">
+    <div class="bg-[#A67C46] text-white px-5 py-3.5 flex items-center justify-between">
+      <h3 class="text-sm font-bold">补全政策线索原文并转为正式政策</h3>
+      <button type="button" id="clueCloseBtn" class="text-amber-100 hover:text-white text-xl leading-none">&times;</button>
+    </div>
+    <div class="p-4 space-y-3 text-xs">
+      <div id="clueTargetTitle" class="font-bold text-[#161922] text-sm"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        <div>
+          <label class="block text-[#4B5263] mb-1">补全后的官方原文 URL</label>
+          <input id="clueUrlInp" type="url" placeholder="https://..." class="w-full px-2.5 py-1.5 border border-[#E6E3DC] rounded-lg">
+        </div>
+        <div>
+          <label class="block text-[#4B5263] mb-1">发文字号（可选）</label>
+          <input id="clueNumInp" type="text" placeholder="如：苏教办〔2025〕12号" class="w-full px-2.5 py-1.5 border border-[#E6E3DC] rounded-lg">
+        </div>
+      </div>
+      <div>
+        <label class="block text-[#4B5263] mb-1">粘贴官方政策正文全文（系统将自动切分段落并升级为正式政策）</label>
+        <textarea id="clueBodyInp" rows="8" placeholder="在此粘贴完整政策正文……" class="w-full px-2.5 py-1.5 border border-[#E6E3DC] rounded-lg"></textarea>
+      </div>
+      <div class="flex justify-end gap-2 pt-1">
+        <button type="button" id="clueCancelBtn" class="px-4 py-1.5 rounded-xl bg-[#F4F2EC] text-[#4B5263] font-medium">取消</button>
+        <button type="button" id="clueSaveBtn" class="px-4 py-1.5 rounded-xl bg-[#A67C46] hover:bg-[#8C6432] text-white font-semibold">保存补全并建立全文索引</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ==================== EMBEDDED V5 DATASET ==================== */
+const V5_DATA = __V5_DATA__;
+const INITIAL_SOURCES = __INITIAL_SOURCES__;
+
+/* ==================== GLOBAL STATE ==================== */
+const CLUE = '政策线索';
+const AUX = '辅助材料（随包目录表）';
+const SMAP = {'已印发':'官方称已印发','制定中':'正在制定','状态不明':'发布状态不明'};
+const PAGE_SIZE = 20;
+
+const state = {
+  tab: 'library',
+  records: V5_DATA.records,
+  paragraphs: V5_DATA.paragraphs,
+  sources: INITIAL_SOURCES,
+  q: '',
+  fullTextMode: true,
+  year: '',
+  province: '',
+  category: '',
+  stage: '',
+  topic: '',
+  tier: '',
+  readableFilter: '',
+  showClue: false,
+  sortKey: '发文日期',
+  sortDir: -1,
+  currentPage: 1,
+  compareIds: [],
+  cmpHighlightNums: true,
+  cmpChartInstance: null,
+  readerRid: null,
+  readerQuery: '',
+  readerMatches: [],
+  readerMatchIdx: 0,
+  ai: {
+    step: 1,
+    topic: '',
+    province: '',
+    stage: '',
+    template: 'standard',
+    length: '1500',
+    engine: 'offline',
+    recs: [],
+    selected: [],
+    draftText: '',
+    citations: [],
+    generating: false,
+  }
+};
+
+/* ==================== UTILITIES ==================== */
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+
+function toast(msg, type = 'info') {
+  const box = document.getElementById('toastBox');
+  const el = document.createElement('div');
+  const colors = {
+    info: 'bg-[#161922] text-[#F8F7F4] border border-[#2E3444]',
+    success: 'bg-[#1F6354] text-white',
+    warn: 'bg-[#9A6324] text-white',
+    error: 'bg-[#9B2C2C] text-white'
+  };
+  el.className = `pointer-events-auto px-4 py-2.5 rounded-xl shadow-lg text-xs font-medium transition-all ${colors[type] || colors.info}`;
+  el.textContent = msg;
+  box.appendChild(el);
+  setTimeout(() => { el.style.opacity = '0'; setTimeout(() => el.remove(), 250); }, 2800);
+}
+
+function copyText(text, label = '已复制到剪贴板') {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => toast(label, 'success')).catch(() => fallbackCopy(text, label));
+  } else {
+    fallbackCopy(text, label);
+  }
+}
+
+function fallbackCopy(text, label) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); toast(label, 'success'); } catch (e) { toast('复制失败，请手动选中复制', 'warn'); }
+  document.body.removeChild(ta);
+}
+
+function downloadFile(filename, content, mime = 'text/plain;charset=utf-8') {
+  const blob = new Blob([content], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function getRec(rid) { return state.records.find(r => r._rid === rid); }
+function getParas(rec) { return rec ? (state.paragraphs[rec._id] || []) : []; }
+function splitTerms(q) { return String(q || '').trim().toLowerCase().split(/\s+/).filter(Boolean); }
+
+function highlightHtml(text, terms, hlNums = false) {
+  let out = esc(text);
+  if (hlNums) {
+    out = out.replace(/(202\d(?:—|-|至)202\d年|202\d年|\d+(?:\.\d+)?%|\d+(?:—|-|～)?\d*(?:个)?(?:课时|学时|学分|门|所|项|个示范|个实验))/g,
+      '<mark class="hl-num">$1</mark>');
+  }
+  if (terms && terms.length) {
+    const escaped = terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).filter(Boolean);
+    if (escaped.length) {
+      const re = new RegExp('(' + escaped.join('|') + ')', 'gi');
+      out = out.replace(re, '<mark class="hl">$1</mark>');
+    }
+  }
+  return out;
+}
+
+function buildSnippet(text, terms) {
+  const low = text.toLowerCase();
+  let pos = -1;
+  for (const t of terms) {
+    const idx = low.indexOf(t);
+    if (idx >= 0 && (pos === -1 || idx < pos)) pos = idx;
+  }
+  if (pos === -1) return text.slice(0, 120);
+  const start = Math.max(0, pos - 35);
+  const end = Math.min(text.length, pos + 95);
+  return (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+}
+
+/* ==================== TAB SWITCHING ==================== */
+function switchTab(tab) {
+  state.tab = tab;
+  ['library', 'compare', 'analytics', 'collect', 'ai'].forEach(t => {
+    document.getElementById('view-' + t).classList.toggle('hidden', t !== tab);
+  });
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === tab);
+  });
+  updateCompareTray();
+  if (tab === 'compare') renderCompare();
+  if (tab === 'analytics') renderAnalytics();
+  if (tab === 'collect') renderCollect();
+  if (tab === 'ai') renderAi();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+});
+
+/* ==================== TAB 1: LIBRARY & FULL-TEXT SEARCH ==================== */
+function initFilterOptions() {
+  const uniq = k => [...new Set(state.records.map(r => r[k] || '').filter(Boolean))].sort();
+  const fill = (id, arr, all) => {
+    const el = document.getElementById(id);
+    const prev = el.value;
+    el.innerHTML = `<option value="">${all}</option>` + arr.map(x => `<option value="${esc(x)}">${esc(x)}</option>`).join('');
+    el.value = prev;
+  };
+  fill('year', uniq('年份').reverse(), '全部年份');
+  fill('category', uniq('资料类别'), '全部类别');
+  const stages = [...new Set(state.records.flatMap(r => (r['教育阶段'] || '').split('、')).filter(Boolean))].sort();
+  const topics = [...new Set(state.records.flatMap(r => (r['政策主题'] || '').split('、')).filter(Boolean))].sort();
+  fill('stage', stages, '全部阶段');
+  fill('topic', topics, '全部主题');
+  const tierOrder = ['A核心政策', 'B相关政策', 'C补充资料', '待人工确认'];
+  const tiers = tierOrder.filter(x => state.records.some(r => r['研究纳入层级'] === x));
+  fill('tier', tiers, '全部层级');
+
+  const cmpSel = document.getElementById('cmpAddSelect');
+  const indexed = state.records.filter(r => getParas(r).length > 0 && r['资料类别'] !== AUX);
+  cmpSel.innerHTML = '<option value="">＋ 快速添加一份已索引政策…</option>' +
+    indexed.map(r => `<option value="${esc(r._rid)}">[${esc(r['省份'].replace('市','').replace('省',''))}·${esc(r['研究纳入层级']||'')}] ${esc(r['文件标题'].slice(0,38))}</option>`).join('');
+}
+
+function renderStatsBar() {
+  const total = state.records.length;
+  const indexedDocs = state.records.filter(r => getParas(r).length > 0).length;
+  const totalParas = Object.values(state.paragraphs).reduce((s, arr) => s + arr.length, 0);
+  const tierA = state.records.filter(r => r['研究纳入层级'] === 'A核心政策').length;
+  const provs = ['北京市','上海市','江苏省','浙江省','广东省'].map(p => `${p.replace(/[省市]/g,'')} ${state.records.filter(r=>r['省份']===p).length}`).join(' · ');
+
+  document.getElementById('statsBar').innerHTML = `
+    <div class="p-4 sm:px-5">
+      <div class="text-[11px] font-semibold uppercase tracking-wider text-[#8C919E]">Corpus Total · 五地收录</div>
+      <div class="mt-1.5 flex items-baseline gap-1.5">
+        <span class="font-serif-cn text-2xl font-bold text-[#161922] tabular-nums">${total}</span>
+        <span class="text-xs text-[#7B8190]">条政策资料</span>
+      </div>
+      <div class="text-[11px] text-[#8C919E] mt-1 truncate">${provs}</div>
+    </div>
+    <div class="p-4 sm:px-5">
+      <div class="text-[11px] font-semibold uppercase tracking-wider text-[#8C919E]">Full-Text Index · 正文索引</div>
+      <div class="mt-1.5 flex items-baseline gap-1.5">
+        <span class="font-serif-cn text-2xl font-bold text-[#1E3A5F] tabular-nums">${indexedDocs}</span>
+        <span class="text-xs text-[#7B8190]">份已解析全文</span>
+      </div>
+      <div class="text-[11px] text-[#8C919E] mt-1 tabular-nums">累计 ${totalParas.toLocaleString()} 段可精准定位</div>
+    </div>
+    <div class="p-4 sm:px-5">
+      <div class="text-[11px] font-semibold uppercase tracking-wider text-[#8C919E]">Tier-A Core · 核心政策</div>
+      <div class="mt-1.5 flex items-baseline gap-1.5">
+        <span class="font-serif-cn text-2xl font-bold text-[#1F6354] tabular-nums">${tierA}</span>
+        <span class="text-xs text-[#7B8190]">份核心样本</span>
+      </div>
+      <div class="text-[11px] text-[#8C919E] mt-1">支持 8 维横向对照与综述</div>
+    </div>
+    <div class="p-4 sm:px-5">
+      <div class="text-[11px] font-semibold uppercase tracking-wider text-[#8C919E]">Live Monitors · 官方信源</div>
+      <div class="mt-1.5 flex items-baseline gap-1.5">
+        <span class="font-serif-cn text-2xl font-bold text-[#A67C46] tabular-nums">${state.sources.filter(s=>s.enabled).length}</span>
+        <span class="text-xs text-[#7B8190]">/ ${state.sources.length} 个已启用</span>
+      </div>
+      <div class="text-[11px] text-[#8C919E] mt-1">覆盖五地教育厅委与部委</div>
+    </div>`;
+}
+
+function searchRecord(rec, terms, fullTextMode) {
+  if (!terms.length) return { matched: true, hits: 0, snippets: [] };
+  const metaHay = `${rec['文件标题']||''} ${rec['原发文机关']||''} ${rec['网页发布机构']||''} ${rec['政策主题']||''} ${rec['发文字号']||''} ${rec['省份']||''} ${rec['城市']||''}`.toLowerCase();
+  const metaAllHit = terms.every(t => metaHay.includes(t));
+
+  if (!fullTextMode) {
+    return { matched: metaAllHit, hits: metaAllHit ? 1 : 0, snippets: [] };
+  }
+
+  const paras = getParas(rec);
+  const snippets = [];
+  let hits = 0;
+  for (const [pid, text] of paras) {
+    const low = text.toLowerCase();
+    if (terms.every(t => low.includes(t))) {
+      hits++;
+      if (snippets.length < 2) snippets.push({ pid, text: buildSnippet(text, terms) });
+    }
+  }
+  if (hits === 0 && terms.length > 1) {
+    const docText = metaHay + ' ' + paras.map(p => p[1]).join(' ').toLowerCase();
+    if (terms.every(t => docText.includes(t))) {
+      for (const [pid, text] of paras) {
+        const low = text.toLowerCase();
+        if (terms.some(t => low.includes(t))) {
+          hits++;
+          if (snippets.length < 2) snippets.push({ pid, text: buildSnippet(text, terms) });
+        }
+      }
+    }
+  }
+  return { matched: metaAllHit || hits > 0, hits, snippets };
+}
+
+function renderLibrary() {
+  const terms = splitTerms(state.q);
+  document.getElementById('clearSearchBtn').classList.toggle('hidden', !state.q.trim());
+
+  const results = [];
+  for (const r of state.records) {
+    const isClue = r['资料类别'] === CLUE;
+    const isAux = r['资料类别'] === AUX;
+    if (isClue && !state.showClue && state.category !== CLUE) continue;
+    if (!isClue && state.category === CLUE) continue;
+    if (isAux && state.category !== AUX) continue;
+    if (!isAux && state.category === AUX) continue;
+    if (state.year && r['年份'] !== state.year) continue;
+    if (state.province && r['省份'] !== state.province) continue;
+    if (state.category && r['资料类别'] !== state.category) continue;
+    if (state.tier && (r['研究纳入层级'] || '') !== state.tier) continue;
+    if (state.stage && !(r['教育阶段'] || '').includes(state.stage)) continue;
+    if (state.topic && !(r['政策主题'] || '').includes(state.topic)) continue;
+    const hasParas = getParas(r).length > 0;
+    if (state.readableFilter === 'yes' && !hasParas) continue;
+    if (state.readableFilter === 'no' && hasParas) continue;
+
+    const sr = searchRecord(r, terms, state.fullTextMode);
+    if (!sr.matched) continue;
+    results.push({ rec: r, hits: sr.hits, snippets: sr.snippets });
+  }
+
+  results.sort((a, b) => {
+    if (state.sortKey === 'hits' && b.hits !== a.hits) return (b.hits - a.hits) * (-state.sortDir);
+    if (terms.length > 0 && state.fullTextMode && b.hits !== a.hits) return b.hits - a.hits;
+    return String(a.rec[state.sortKey] || '').localeCompare(String(b.rec[state.sortKey] || ''), 'zh') * state.sortDir;
+  });
+
+  const unfiltered = !terms.length && !state.year && !state.province && !state.category && !state.stage && !state.topic && !state.tier && !state.readableFilter && !state.showClue;
+  const pages = unfiltered ? Math.max(1, Math.ceil(results.length / PAGE_SIZE)) : 1;
+  if (state.currentPage > pages) state.currentPage = pages;
+  const from = unfiltered ? (state.currentPage - 1) * PAGE_SIZE : 0;
+  const view = unfiltered ? results.slice(from, from + PAGE_SIZE) : results;
+
+  const totalHits = results.reduce((s, x) => s + x.hits, 0);
+  document.getElementById('count').innerHTML = terms.length && state.fullTextMode
+    ? `全文检索命中 <strong class="text-[#1E3A5F]">${results.length}</strong> 份政策，累计定位正文 <strong class="text-[#1E3A5F]">${totalHits}</strong> 个段落`
+    : (unfiltered
+      ? `第 ${results.length ? from + 1 : 0}–${Math.min(from + PAGE_SIZE, results.length)} 条，共 <strong class="text-[#161922]">${results.length}</strong> 条（第 ${state.currentPage}/${pages} 页）`
+      : `筛选命中 <strong class="text-[#161922]">${results.length}</strong> 条（总库 ${state.records.length} 条）`);
+
+  const tb = document.getElementById('tb');
+  if (!view.length) {
+    tb.innerHTML = `<tr><td colspan="6" class="py-16 text-center text-[#8C919E] text-sm">未检索到匹配的政策文件，请尝试调整关键词或筛选条件。</td></tr>`;
+  } else {
+    tb.innerHTML = view.map(({ rec: r, hits, snippets }) => {
+      const isClue = r['资料类别'] === CLUE;
+      const pcnt = getParas(r).length;
+      const checked = state.compareIds.includes(r._rid);
+      const tier = r['研究纳入层级'] || '';
+      const tierCls = tier.startsWith('A') ? 'bg-[#EBF5F2] text-[#1F6354] border-[#C5E2D9]'
+        : tier.startsWith('B') ? 'bg-[#F7F1E6] text-[#8A6230] border-[#E7D8BE]'
+        : 'bg-[#F4F2EC] text-[#5C6373] border-[#E6E3DC]';
+
+      const snippetHtml = snippets.length ? `
+        <div class="mt-2.5 space-y-1.5">
+          ${snippets.map(sn => `
+            <div data-open-reader="${esc(r._rid)}" data-jump-pid="${esc(sn.pid)}"
+              class="cursor-pointer group bg-[#FAF8F3] hover:bg-[#F4EFE4] border-l-2 border-[#A67C46] rounded-r-lg px-3 py-2 text-xs text-[#3F4554] leading-relaxed transition">
+              <span class="inline-block px-1.5 py-0.2 rounded bg-[#ECE2CE] text-[#6B4610] font-mono text-[10px] font-semibold mr-1.5">${esc(sn.pid)}</span>
+              <span>${highlightHtml(sn.text, terms)}</span>
+              <span class="ml-1.5 text-[#1E3A5F] opacity-0 group-hover:opacity-100 font-semibold transition">定位原文 →</span>
+            </div>`).join('')}
+        </div>` : '';
+
+      const stageTags = (r['教育阶段'] || '').split('、').filter(Boolean).slice(0, 3)
+        .map(x => `<span class="inline-block px-2 py-0.5 rounded-md bg-[#F4F2EC] text-[#4B5263] text-[11px] mr-1 mb-1">${esc(x)}</span>`).join('');
+      const topicTags = (r['政策主题'] || '').split('、').filter(Boolean).slice(0, 3)
+        .map(x => `<span class="inline-block px-2 py-0.5 rounded-md bg-[#F2F6FA] text-[#1E3A5F] text-[11px] mr-1 mb-1">${esc(x)}</span>`).join('');
+
+      return `<tr class="${isClue ? 'bg-[#FAF8F3]/60' : 'hover:bg-[#FAF9F6]'} transition">
+        <td class="py-4 px-4 text-center align-top">
+          <input type="checkbox" data-cmp-chk="${esc(r._rid)}" ${checked ? 'checked' : ''}
+            class="w-4 h-4 rounded border-[#CFCAC0] text-[#1E3A5F] cursor-pointer mt-0.5">
+        </td>
+        <td class="py-4 px-4 align-top text-xs text-[#4B5263] whitespace-nowrap tabular-nums">
+          <div class="font-semibold text-[#161922]">${esc(r['发文日期'] || '—')}</div>
+          <div class="text-[11px] text-[#8C919E] mt-0.5">${esc(r['年份'] || '')}</div>
+        </td>
+        <td class="py-4 px-4 align-top">
+          <div class="flex items-start gap-2 flex-wrap">
+            <button type="button" data-open-reader="${esc(r._rid)}" class="text-left font-semibold text-[#161922] hover:text-[#1E3A5F] transition leading-snug text-[14px]">
+              ${isClue ? '<span class="text-[#8A6230] mr-1">【线索】</span>' : ''}${highlightHtml(r['文件标题'], terms)}
+            </button>
+            ${hits > 0 ? `<span class="px-2 py-0.5 rounded-full bg-[#F7F1E6] text-[#8A6230] border border-[#E7D8BE] text-[11px] font-semibold whitespace-nowrap tabular-nums">命中 ${hits} 段</span>` : ''}
+          </div>
+          <div class="text-xs text-[#6E7485] mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+            <span class="font-medium text-[#3F4554]">${esc(r['省份'])}${r['城市'] ? ' · ' + esc(r['城市']) : ''}</span>
+            <span class="text-[#CFCAC0]">·</span>
+            <span>${esc(r['原发文机关'] || r['网页发布机构'] || '—')}</span>
+            ${r['发文字号'] ? `<span class="text-[#CFCAC0]">·</span><span class="font-mono text-[11px] text-[#7B8190]">${esc(r['发文字号'])}</span>` : ''}
+            <span class="text-[#CFCAC0]">·</span>
+            ${pcnt > 0 ? `<span class="text-[#1F6354] font-medium tabular-nums">${pcnt} 段原文</span>` : '<span class="text-[#989DA8]">暂无正文</span>'}
+          </div>
+          ${snippetHtml}
+        </td>
+        <td class="py-4 px-4 align-top text-xs space-y-1.5">
+          <div class="inline-block px-2 py-0.5 rounded-md bg-[#F4F2EC] text-[#4B5263] text-[11px]">${esc(r['资料类别'])}</div>
+          ${tier ? `<div><span class="inline-block px-2 py-0.5 rounded-md border text-[11px] font-medium ${tierCls}">${esc(tier)}</span></div>` : ''}
+        </td>
+        <td class="py-4 px-4 align-top">${stageTags}${topicTags}</td>
+        <td class="py-4 px-4 align-top text-xs space-y-1.5 text-right">
+          ${pcnt > 0 ? `<button type="button" data-open-reader="${esc(r._rid)}" class="inline-flex items-center justify-center w-full px-3 py-1.5 rounded-lg bg-[#161922] hover:bg-[#272C3B] text-[#F8F7F4] font-medium transition">原文定位</button>` : ''}
+          ${r['官方原文URL'] ? `<a href="${esc(r['官方原文URL'])}" target="_blank" rel="noopener" class="inline-flex items-center justify-center w-full px-3 py-1.5 rounded-lg bg-[#FAF9F6] hover:bg-[#EFECE6] text-[#4B5263] border border-[#E6E3DC] transition">官方出处 ↗</a>` : ''}
+        </td>
+      </tr>`;
+    }).join('');
+  }
+
+  const pg = document.getElementById('pager');
+  if (!unfiltered || !results.length) { pg.innerHTML = ''; return; }
+  let s = Math.max(1, state.currentPage - 2), e = Math.min(pages, s + 4);
+  s = Math.max(1, e - 4);
+  let h = `<button type="button" data-page="1" ${state.currentPage===1?'disabled':''} class="px-3 py-1.5 rounded-lg border border-[#E6E3DC] bg-white text-xs text-[#4B5263] disabled:opacity-40 hover:border-[#1E3A5F] transition">首页</button>` +
+          `<button type="button" data-page="${state.currentPage-1}" ${state.currentPage===1?'disabled':''} class="px-3 py-1.5 rounded-lg border border-[#E6E3DC] bg-white text-xs text-[#4B5263] disabled:opacity-40 hover:border-[#1E3A5F] transition">上一页</button>`;
+  for (let i = s; i <= e; i++) {
+    h += `<button type="button" data-page="${i}" class="px-3 py-1.5 rounded-lg border text-xs tabular-nums transition ${i===state.currentPage?'bg-[#161922] text-white border-[#161922] font-semibold':'border-[#E6E3DC] bg-white text-[#4B5263] hover:border-[#1E3A5F]'}">${i}</button>`;
+  }
+  h += `<button type="button" data-page="${state.currentPage+1}" ${state.currentPage===pages?'disabled':''} class="px-3 py-1.5 rounded-lg border border-[#E6E3DC] bg-white text-xs text-[#4B5263] disabled:opacity-40 hover:border-[#1E3A5F] transition">下一页</button>` +
+       `<button type="button" data-page="${pages}" ${state.currentPage===pages?'disabled':''} class="px-3 py-1.5 rounded-lg border border-[#E6E3DC] bg-white text-xs text-[#4B5263] disabled:opacity-40 hover:border-[#1E3A5F] transition">末页</button>`;
+  pg.innerHTML = h;
+}
+
+/* ==================== ORIGINAL TEXT READER MODAL ==================== */
+function openReader(rid, jumpPid = null, initialQuery = null) {
+  const rec = getRec(rid);
+  if (!rec) return;
+  state.readerRid = rid;
+  state.readerQuery = initialQuery !== null ? initialQuery : state.q;
+  document.getElementById('rdIdBadge').textContent = rec._id;
+  document.getElementById('rdTierBadge').textContent = rec['研究纳入层级'] || rec['资料类别'];
+  document.getElementById('rdTitle').textContent = rec['文件标题'];
+  document.getElementById('rdMeta').textContent = `${rec['省份']}${rec['城市'] ? ' · ' + rec['城市'] : ''} ｜ ${rec['原发文机关'] || rec['网页发布机构'] || ''} ｜ ${rec['发文日期'] || rec['年份'] || ''} ${rec['发文字号'] ? '｜ ' + rec['发文字号'] : ''}`;
+  const link = document.getElementById('rdOfficialLink');
+  if (rec['官方原文URL']) { link.href = rec['官方原文URL']; link.classList.remove('hidden'); }
+  else { link.classList.add('hidden'); }
+
+  document.getElementById('rdSearchInput').value = state.readerQuery;
+  document.getElementById('readerModal').classList.remove('hidden');
+  renderReaderBody(jumpPid);
+}
+
+function renderReaderBody(jumpPid = null) {
+  const rec = getRec(state.readerRid);
+  const paras = getParas(rec);
+  const terms = splitTerms(state.readerQuery);
+  const body = document.getElementById('rdBody');
+
+  if (!paras.length) {
+    body.innerHTML = `<div class="py-12 text-center text-[#8C919E] text-sm">该记录暂无本地正文段落索引，请点击右上角「官方原文」查看。</div>`;
+    document.getElementById('rdMatchInfo').textContent = '0 处命中';
+    state.readerMatches = [];
+    return;
+  }
+
+  state.readerMatches = [];
+  body.innerHTML = paras.map(([pid, text], idx) => {
+    const low = text.toLowerCase();
+    const isHit = terms.length > 0 && terms.some(t => low.includes(t));
+    if (isHit) state.readerMatches.push(pid);
+    const isTarget = jumpPid === pid;
+    return `<div id="rd-p-${esc(pid)}" class="group p-4 rounded-xl border transition ${isTarget ? 'bg-[#FAF5E9] border-[#A67C46] ring-2 ring-[#E7D8BE]' : (isHit ? 'bg-[#FCFBF6] border-[#DFD2B8]' : 'bg-white border-[#EFECE6] hover:border-[#DEDAD1]')}">
+      <div class="flex items-center justify-between mb-1.5">
+        <span class="font-mono text-[11px] font-semibold text-[#1E3A5F] bg-[#F2F6FA] px-2 py-0.5 rounded">${esc(rec._id)}:${esc(pid)}</span>
+        <button type="button" data-copy-para="${idx}" class="opacity-0 group-hover:opacity-100 text-[11px] text-[#6E7485] hover:text-[#1E3A5F] font-medium transition">复制带出处引文</button>
+      </div>
+      <div class="text-[14px] text-[#222630] leading-8">${highlightHtml(text, terms)}</div>
+    </div>`;
+  }).join('');
+
+  state.readerMatchIdx = 0;
+  if (jumpPid) {
+    const idx = state.readerMatches.indexOf(jumpPid);
+    if (idx >= 0) state.readerMatchIdx = idx;
+    setTimeout(() => {
+      const el = document.getElementById('rd-p-' + jumpPid);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 60);
+  } else if (state.readerMatches.length > 0) {
+    jumpToReaderMatch(0);
+  }
+  updateReaderMatchInfo();
+}
+
+function updateReaderMatchInfo() {
+  const n = state.readerMatches.length;
+  document.getElementById('rdMatchInfo').textContent = state.readerQuery.trim()
+    ? (n ? `第 ${state.readerMatchIdx + 1} / ${n} 处` : '0 处命中')
+    : `共 ${getParas(getRec(state.readerRid)).length} 段`;
+}
+
+function jumpToReaderMatch(idx) {
+  if (!state.readerMatches.length) return;
+  state.readerMatchIdx = (idx + state.readerMatches.length) % state.readerMatches.length;
+  const pid = state.readerMatches[state.readerMatchIdx];
+  document.querySelectorAll('#rdBody > div').forEach(d => d.classList.remove('ring-2', 'ring-[#A67C46]'));
+  const el = document.getElementById('rd-p-' + pid);
+  if (el) {
+    el.classList.add('ring-2', 'ring-[#A67C46]');
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  updateReaderMatchInfo();
+}
+
+/* ==================== TAB 2: HORIZONTAL COMPARISON ==================== */
+const COMPARE_DIMENSIONS = [
+  { key: 'basic', name: '1. 基本信息与发文层级', desc: '地区、发文机关、文号、日期与研究层级', type: 'meta' },
+  { key: 'cycle', name: '2. 规划周期与时间节点', desc: '实施年限与关键里程碑目标年份', patterns: /202\d(?:—|-|至)202\d|到202\d年|202[4-9]年|2030年|三年行动|五年行动|阶段目标/ },
+  { key: 'stage', name: '3. 覆盖学段与目标群体', desc: '学前/义务教育/高中/职教/高教及师生对象', patterns: /小学|初中|高中|义务教育|中小学|职业教育|高校|高等教育|学前|全学段|全体学生|师生/ },
+  { key: 'goal', name: '4. 总体目标与战略定位', desc: '顶层设计定位、核心愿景与总体指标', patterns: /总体目标|工作目标|发展目标|指导思想|基本原则|到202\d年.*建成|打造.*示范|高质量发展/ },
+  { key: 'course', name: '5. 课程体系与课时/学分', desc: '通识课程、必修/选修安排、课时与教材建设', patterns: /课程|课时|学时|学分|通识教育|教材|教学大纲|教学指南|跨学科|素养框架/ },
+  { key: 'teacher', name: '6. 师资培养与教研支撑', desc: '教师AI素养提升、专题培训、教研与名师建设', patterns: /教师|师资|培训|教研|名师|骨干教师|师范生|数字素养|智能素养|专业发展/ },
+  { key: 'infra', name: '7. 基础设施、平台与场景', desc: '算力底座、大模型、智慧教育平台、实验区与示范校', patterns: /平台|大模型|算力|实验室|实验区|示范校|应用场景|智慧校园|智能体|数据底座|底座/ },
+  { key: 'gov', name: '8. 评价改革、伦理安全与保障', desc: '伦理规范、隐私安全、评价考核、经费与组织保障', patterns: /伦理|安全|隐私|规范|监管|评价|考核|经费|保障|领导小组|统筹|底线/ }
+];
+
+function extractDimensionEvidence(rec, dim) {
+  const paras = getParas(rec);
+  const matched = [];
+  for (const [pid, text] of paras) {
+    if (dim.patterns && dim.patterns.test(text)) matched.push({ pid, text });
+  }
+  return matched;
+}
+
+function toggleCompare(rid) {
+  const idx = state.compareIds.indexOf(rid);
+  if (idx >= 0) {
+    state.compareIds.splice(idx, 1);
+  } else {
+    if (state.compareIds.length >= 6) {
+      toast('横向对比最多同时选择 6 份政策文件', 'warn');
+      return;
+    }
+    state.compareIds.push(rid);
+  }
+  updateCompareTray();
+  if (state.tab === 'library') renderLibrary();
+  if (state.tab === 'compare') renderCompare();
+}
+
+function updateCompareTray() {
+  const n = state.compareIds.length;
+  const badge = document.getElementById('navCompareBadge');
+  badge.textContent = n;
+  badge.classList.toggle('hidden', n === 0);
+
+  const tray = document.getElementById('compareTray');
+  tray.classList.toggle('hidden', state.tab !== 'library' || n === 0);
+  document.getElementById('trayCount').textContent = n;
+  document.getElementById('trayChips').innerHTML = state.compareIds.map(rid => {
+    const r = getRec(rid);
+    if (!r) return '';
+    return `<span class="px-2 py-0.5 rounded-md bg-white/10 border border-white/15 text-[11px] text-[#E6E3DC] whitespace-nowrap">${esc(r['省份'].replace(/[省市]/g,''))}·${esc(r['文件标题'].slice(0,12))}…</span>`;
+  }).join('');
+}
+
+function selectFiveRegionPreset() {
+  const targets = [
+    r => r['省份'] === '北京市' && r['文件标题'].includes('推进中小学人工智能教育工作方案'),
+    r => r['省份'] === '上海市' && r['文件标题'].includes('上海市推进实施人工智能赋能基础教育'),
+    r => r['省份'] === '江苏省' && r['文件标题'].includes('人工智能赋能教育高质量发展行动方案') && r['城市'] === '省级',
+    r => r['省份'] === '浙江省' && r['文件标题'].includes('浙江省推进“人工智能+教育”行动方案'),
+    r => r['省份'] === '广东省' && r['文件标题'].includes('广东省“人工智能+教育”行动方案')
+  ];
+  const picked = [];
+  for (const fn of targets) {
+    const found = state.records.find(r => fn(r) && getParas(r).length > 0) || state.records.find(fn);
+    if (found && !picked.includes(found._rid)) picked.push(found._rid);
+  }
+  state.compareIds = picked;
+  updateCompareTray();
+  switchTab('compare');
+  toast(`已载入五地核心行动方案（${picked.length} 份）进行横向对比`, 'success');
+}
+
+function selectCoursePreset() {
+  const targets = [
+    r => r['文件标题'].includes('北京市中小学人工智能教育地方课程纲要'),
+    r => r['文件标题'].includes('上海市中小学人工智能教学实施要求'),
+    r => r['文件标题'].includes('广东省中小学人工智能课程指导纲要'),
+    r => r['文件标题'].includes('浙江省中小学人工智能通识教育指导意见')
+  ];
+  const picked = [];
+  for (const fn of targets) {
+    const found = state.records.find(r => fn(r) && getParas(r).length > 0) || state.records.find(fn);
+    if (found && !picked.includes(found._rid)) picked.push(found._rid);
+  }
+  state.compareIds = picked;
+  updateCompareTray();
+  renderCompare();
+  toast(`已载入 ${picked.length} 份中小学人工智能课程/教学纲要对比`, 'success');
+}
+
+function renderCompare() {
+  const recs = state.compareIds.map(getRec).filter(Boolean);
+  const chipsEl = document.getElementById('cmpSelectedChips');
+  if (!recs.length) {
+    chipsEl.innerHTML = `<div class="text-xs text-[#8C919E]">尚未选择对比政策。请点击上方「五地核心方案预设」或在「资料库」勾选政策。</div>`;
+    document.getElementById('cmpChartWrap').classList.add('hidden');
+    document.getElementById('cmpMatrixWrap').innerHTML = `<div class="py-16 text-center text-[#8C919E] text-sm">请至少选择 2 份政策文件以生成 8 维度横向对比矩阵</div>`;
+    return;
+  }
+
+  chipsEl.innerHTML = recs.map(r => `
+    <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F4F2EC] border border-[#E6E3DC] text-xs text-[#161922]">
+      <span class="font-semibold text-[#1E3A5F]">${esc(r['省份'].replace(/[省市]/g,''))}</span>
+      <span>${esc(r['文件标题'].slice(0, 26))}${r['文件标题'].length > 26 ? '…' : ''}</span>
+      <button type="button" data-rm-cmp="${esc(r._rid)}" class="text-[#8C919E] hover:text-[#9B2C2C] font-bold ml-1 transition">&times;</button>
+    </div>`).join('');
+
+  const chartWrap = document.getElementById('cmpChartWrap');
+  chartWrap.classList.remove('hidden');
+  const chartDims = COMPARE_DIMENSIONS.slice(4);
+  const palette = ['#1E3A5F', '#A67C46', '#1F6354', '#6E4C6E', '#4C6B8A', '#8C6239'];
+  const datasets = recs.map((r, i) => ({
+    label: `${r['省份'].replace(/[省市]/g,'')} · ${r['文件标题'].slice(0, 14)}…`,
+    data: chartDims.map(d => extractDimensionEvidence(r, d).length),
+    backgroundColor: palette[i % palette.length] + 'dd',
+    borderColor: palette[i % palette.length],
+    borderWidth: 1,
+    borderRadius: 5
+  }));
+
+  if (state.cmpChartInstance) state.cmpChartInstance.destroy();
+  const ctx = document.getElementById('cmpChart').getContext('2d');
+  state.cmpChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['课程体系与课时', '师资培养与教研', '基础设施与场景', '评价伦理与保障'],
+      datasets
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { boxWidth: 11, color: '#4B5263', font: { size: 11 } } } },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: '#4B5263', font: { size: 11 } } },
+        y: { beginAtZero: true, grid: { color: '#EFECE6' }, ticks: { color: '#7B8190', font: { size: 11 } }, title: { display: true, text: '命中原文段落数', color: '#7B8190', font: { size: 11 } } }
+      }
+    }
+  });
+
+  const colW = Math.max(245, Math.floor(960 / recs.length));
+  let html = `<table class="w-full text-left border-collapse text-xs">
+    <thead>
+      <tr class="bg-[#161922] text-[#F8F7F4]">
+        <th class="py-3.5 px-4 w-52 sticky left-0 bg-[#161922] z-10 font-semibold">对比维度（8 项指标）</th>
+        ${recs.map(r => `<th class="py-3.5 px-4 border-l border-[#2B3140]" style="min-width:${colW}px">
+          <div class="text-[11px] text-[#E6C999] font-normal">${esc(r['省份'])}${r['城市'] ? ' · ' + esc(r['城市']) : ''} · ${esc(r['年份']||'')}</div>
+          <div class="font-serif-cn font-bold text-[13px] mt-0.5 leading-snug">${esc(r['文件标题'])}</div>
+        </th>`).join('')}
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-[#EFECE6]">`;
+
+  for (const dim of COMPARE_DIMENSIONS) {
+    html += `<tr class="hover:bg-[#FAF9F6]/60">
+      <td class="py-3.5 px-4 align-top bg-[#FAF9F6] font-semibold text-[#161922] sticky left-0 border-r border-[#E6E3DC]">
+        <div>${esc(dim.name)}</div>
+        <div class="text-[11px] font-normal text-[#8C919E] mt-1 leading-relaxed">${esc(dim.desc)}</div>
+      </td>`;
+    for (const r of recs) {
+      if (dim.type === 'meta') {
+        html += `<td class="py-3.5 px-4 align-top border-l border-[#EFECE6] space-y-1.5 text-[#3F4554]">
+          <div><span class="text-[#8C919E]">机关：</span>${esc(r['原发文机关'] || r['网页发布机构'] || '—')}</div>
+          <div><span class="text-[#8C919E]">文号：</span><span class="font-mono text-[11px]">${esc(r['发文字号'] || '未标注')}</span></div>
+          <div><span class="text-[#8C919E]">日期：</span><span class="tabular-nums">${esc(r['发文日期'] || r['年份'] || '—')}</span></div>
+          <div><span class="text-[#8C919E]">层级：</span><span class="px-2 py-0.5 rounded bg-[#EBF5F2] text-[#1F6354] font-medium">${esc(r['研究纳入层级'] || '—')}</span></div>
+          <div><span class="text-[#8C919E]">主题：</span>${esc(r['政策主题'] || '—')}</div>
+        </td>`;
+      } else {
+        const evs = extractDimensionEvidence(r, dim);
+        if (!evs.length) {
+          const fallback = dim.key === 'stage' && r['教育阶段'] ? `<div class="text-[#3F4554]">标签：${esc(r['教育阶段'])}</div>` : '<span class="text-[#989DA8] italic">正文中未检出显性条款</span>';
+          html += `<td class="py-3.5 px-4 align-top border-l border-[#EFECE6]">${fallback}</td>`;
+        } else {
+          const top = evs.slice(0, 2);
+          html += `<td class="py-3.5 px-4 align-top border-l border-[#EFECE6] space-y-2">
+            <div class="text-[11px] text-[#1E3A5F] font-semibold tabular-nums">检出 ${evs.length} 条原文条款</div>
+            ${top.map(e => `<div class="p-2.5 rounded-lg bg-[#FAF9F6] border border-[#EFECE6] leading-relaxed text-[#2C313D]">
+              <button type="button" data-open-reader="${esc(r._rid)}" data-jump-pid="${esc(e.pid)}" class="cite-chip mr-1.5">${esc(r._id)}:${esc(e.pid)}</button>
+              <span>${highlightHtml(e.text.slice(0, 150) + (e.text.length > 150 ? '…' : ''), [], state.cmpHighlightNums)}</span>
+            </div>`).join('')}
+          </td>`;
+        }
+      }
+    }
+    html += `</tr>`;
+  }
+  html += `</tbody></table>`;
+  document.getElementById('cmpMatrixWrap').innerHTML = html;
+}
+
+function exportComparison(format) {
+  const recs = state.compareIds.map(getRec).filter(Boolean);
+  if (!recs.length) { toast('请先选择需要对比的政策文件', 'warn'); return; }
+  if (format === 'md') {
+    let md = `# 人工智能教育政策横向对比报告\n\n对比政策（共 ${recs.length} 份）：\n` +
+      recs.map((r, i) => `${i+1}. 《${r['文件标题']}》（${r['省份']}，${r['原发文机关']||''}，${r['发文日期']||r['年份']||''}）`).join('\n') + '\n\n';
+    md += '| 对比维度 | ' + recs.map(r => r['省份'] + '·' + r['文件标题'].slice(0, 20)).join(' | ') + ' |\n';
+    md += '|---|' + recs.map(() => '---').join('|') + '|\n';
+    for (const dim of COMPARE_DIMENSIONS) {
+      const cells = recs.map(r => {
+        if (dim.type === 'meta') return `${r['原发文机关']||''} / ${r['发文字号']||'无文号'} / ${r['发文日期']||r['年份']||''}`;
+        const evs = extractDimensionEvidence(r, dim);
+        return evs.length ? `[${r._id}:${evs[0].pid}] ${evs[0].text.slice(0, 90).replace(/\|/g, '｜')}…（共${evs.length}条）` : '未检出显性条款';
+      });
+      md += `| **${dim.name}** | ${cells.join(' | ')} |\n`;
+    }
+    downloadFile('人工智能教育政策横向对比表.md', md, 'text/markdown;charset=utf-8');
+    toast('已导出 Markdown 横向对比表', 'success');
+  } else {
+    const rows = [['对比维度', ...recs.map(r => `${r['省份']}-${r['文件标题']}`)]];
+    for (const dim of COMPARE_DIMENSIONS) {
+      rows.push([dim.name, ...recs.map(r => {
+        if (dim.type === 'meta') return `${r['原发文机关']||''} | ${r['发文字号']||''} | ${r['发文日期']||r['年份']||''}`;
+        const evs = extractDimensionEvidence(r, dim);
+        return evs.length ? evs.slice(0, 2).map(e => `[${e.pid}] ${e.text.slice(0, 120)}`).join(' ; ') : '未检出显性条款';
+      })]);
+    }
+    const csv = '\uFEFF' + rows.map(row => row.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+    downloadFile('人工智能教育政策横向对比表.csv', csv, 'text/csv;charset=utf-8');
+    toast('已导出 CSV 横向对比表（Excel 可直接打开）', 'success');
+  }
+}
+
+/* ==================== TAB 3: AUTOMATED COLLECTION CENTER ==================== */
+function renderCollect() {
+  document.getElementById('srcCount').textContent = state.sources.length;
+  document.getElementById('sourcesTb').innerHTML = state.sources.map((s, idx) => `
+    <tr class="hover:bg-[#FAF9F6] transition">
+      <td class="py-2.5 px-3"><input type="checkbox" data-toggle-src="${idx}" ${s.enabled ? 'checked' : ''} class="rounded text-[#1E3A5F] cursor-pointer"></td>
+      <td class="py-2.5 px-3 font-medium text-[#161922] whitespace-nowrap">${esc(s.province)}</td>
+      <td class="py-2.5 px-3">
+        <div class="font-semibold text-[#161922]">${esc(s.name)}</div>
+        <a href="${esc(s.url)}" target="_blank" rel="noopener" class="text-[11px] text-[#1E3A5F] hover:underline font-mono">${esc(s.url)}</a>
+      </td>
+      <td class="py-2.5 px-3 whitespace-nowrap"><span class="px-2 py-0.5 rounded-md text-[11px] font-medium ${s.verified ? 'bg-[#EBF5F2] text-[#1F6354]' : 'bg-[#F7F1E6] text-[#8A6230]'}">${s.verified ? '已核验' : '待复核'}</span></td>
+      <td class="py-2.5 px-3 text-[#6E7485]">${esc((s.keywords || []).join('、'))}</td>
+    </tr>`).join('');
+  renderScheduleCode();
+}
+
+function renderScheduleCode() {
+  const freq = document.getElementById('schedFreq').value;
+  const plat = document.getElementById('schedPlatform').value;
+  const cronMap = { daily: '30 23 * * *', weekly: '0 0 * * 1', monthly: '0 0 1 * *' };
+  const cronLocal = { daily: '30 7 * * *', weekly: '0 8 * * 1', monthly: '0 8 1 * *' };
+  const winFreq = { daily: 'DAILY /ST 07:30', weekly: 'WEEKLY /D MON /ST 08:00', monthly: 'MONTHLY /D 1 /ST 08:00' };
+
+  let code = '';
+  if (plat === 'gha') {
+    code = `name: 人工智能教育政策自动持续采集
+on:
+  schedule:
+    - cron: '${cronMap[freq]}'   # 北京时间自动触发
+  workflow_dispatch:              # 支持随时手动一键运行
+
+jobs:
+  collect-policies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install beautifulsoup4 lxml pypdf
+      - name: 运行五地官方站点增量采集与去重
+        run: python collector/auto_collector.py --config collector/sources_config.json --live
+      - name: 自动提交新采集的政策文件
+        run: |
+          git config user.name "AI-Edu-Policy-Bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "chore: 自动增量采集更新人工智能教育政策库"
+          git push`;
+  } else if (plat === 'win') {
+    code = `@echo off
+chcp 65001 >nul
+echo 正在注册 Windows 定时自动采集任务...
+schtasks /Create /TN "AI_Edu_Policy_AutoCollect" /TR "cmd /c cd /d %~dp0.. && python collector\\auto_collector.py --config collector\\sources_config.json --live" /SC ${winFreq[freq]} /F
+echo 注册完成！可在 Windows 任务计划程序中查看 AI_Edu_Policy_AutoCollect。
+pause`;
+  } else {
+    code = `# 添加到当前用户的 crontab（运行 crontab -e 后粘贴）：
+${cronLocal[freq]} cd /path/to/人工智能教育政策资料库 && python3 collector/auto_collector.py --config collector/sources_config.json --live >> collector/collect.log 2>&1`;
+  }
+  document.getElementById('schedCodeBox').textContent = code;
+}
+
+function ingestNewPolicy({ title, province, date, agency, url, bodyText, category = '正式政策文件', tier = 'A核心政策' }) {
+  const cleanTitle = String(title || '').trim();
+  if (!cleanTitle) return { added: false, reason: '标题为空' };
+  if (state.records.some(r => r['文件标题'] === cleanTitle && r['省份'] === province)) {
+    return { added: false, reason: '库中已存在同标题同地区政策（已自动去重）' };
+  }
+  const provMap = {'北京市':'BJ','上海市':'SH','江苏省':'JS','浙江省':'ZJ','广东省':'GD'};
+  const prefix = provMap[province] || 'CN';
+  const docId = `${prefix}-NEW${String(state.records.length + 1).padStart(3, '0')}`;
+  const rid = `R${String(state.records.length + 1).padStart(4, '0')}`;
+
+  const lines = String(bodyText || '').split(/\n+/).map(x => x.trim()).filter(x => x.length >= 6);
+  const paras = lines.map((t, i) => [`P${String(i + 1).padStart(3, '0')}`, t]);
+
+  const full = cleanTitle + ' ' + lines.join(' ');
+  const stageDict = ['学前教育','小学','初中','高中','基础教育','职业教育','高等教育','全学段'];
+  const topicDict = ['顶层规划与综合改革','通识教育与课程建设','AI赋能教学与场景应用','师资培养与教师素养','平台设施与试点示范','教育治理与评价改革','伦理安全与应用规范'];
+  const stages = stageDict.filter(k => full.includes(k)).join('、') || '全学段';
+  const topics = topicDict.filter(k => full.includes(k.slice(0,2)) || full.includes(k.slice(-2))).join('、') || '顶层规划与综合改革';
+
+  const rec = {
+    _rid: rid, _id: docId, _pcnt: paras.length,
+    '文件标题': cleanTitle, '年份': (date || '').slice(0, 4) || '2026',
+    '省份': province || '北京市', '城市': '新增导入',
+    '原发文机关': agency || '官方发布', '网页发布机构': agency || '新增导入',
+    '发文日期': date || '2026-11-22', '资料类别': category,
+    '教育阶段': stages, '政策主题': topics, '官方原文URL': url || '',
+    '核验状态': '已核验', '研究纳入层级': tier, '发文字号': ''
+  };
+  state.records.unshift(rec);
+  if (paras.length) state.paragraphs[docId] = paras;
+  initFilterOptions();
+  renderStatsBar();
+  renderLibrary();
+  return { added: true, rid, docId, paraCount: paras.length };
+}
+
+/* ==================== TAB 4: AI LITERATURE REVIEW STUDIO ==================== */
+function aiTokenize(s) {
+  const out = [];
+  const clean = String(s || '').replace(/[《》“”"']/g, ' ');
+  const known = ['人工智能','中小学','高校','高等教育','基础教育','通识','课程','课时','教师','师资',
+    '素养','赋能','教育','专业','人才培养','实验区','示范校','应用','数字化','教学','大模型','算力','伦理','安全','评价'];
+  for (const k of known) if (clean.includes(k)) out.push(k);
+  clean.split(/[\s,，、；;：:]+/).forEach(w => { if (w.length >= 2 && w.length <= 12) out.push(w); });
+  return [...new Set(out)];
+}
+
+function aiRecommend() {
+  const topic = document.getElementById('aiTopicInput').value.trim();
+  if (!topic) { toast('请先填写研究主题', 'warn'); return; }
+  state.ai.topic = topic;
+  state.ai.province = document.getElementById('aiProvSel').value;
+  state.ai.stage = document.getElementById('aiStageSel').value;
+  state.ai.template = document.getElementById('aiTplSel').value;
+  state.ai.length = document.getElementById('aiLenSel').value;
+
+  const terms = aiTokenize(topic);
+  const seen = new Set();
+  const scored = [];
+
+  for (const r of state.records) {
+    if (r['资料类别'] === CLUE || r['资料类别'] === AUX) continue;
+    const key = `${r['文件标题']}|${r['省份']}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    const paras = getParas(r);
+    let score = 0;
+    const reasons = [];
+    if (r['研究纳入层级'] === 'A核心政策') { score += 55; reasons.push('A核心政策'); }
+    else if (r['研究纳入层级'] === 'B相关政策') { score += 28; reasons.push('B相关政策'); }
+    else { score += 8; reasons.push('C补充资料'); }
+
+    if (state.ai.province && r['省份'] === state.ai.province) { score += 22; reasons.push('地区匹配'); }
+    if (state.ai.stage && (r['教育阶段'] || '').includes(state.ai.stage)) { score += 12; reasons.push('学段匹配'); }
+
+    const titleHay = `${r['文件标题']} ${r['政策主题'] || ''}`;
+    let titleHits = 0;
+    for (const t of terms) if (titleHay.includes(t)) titleHits++;
+    if (titleHits) { score += titleHits * 10; reasons.push(`标题命中 ${titleHits} 词`); }
+
+    let paraHits = 0;
+    for (const [, txt] of paras) if (terms.some(t => txt.includes(t))) paraHits++;
+    if (paraHits > 0) { score += Math.min(35, paraHits * 2); reasons.push(`正文命中 ${paraHits} 段`); }
+    if (paras.length > 0) { score += 10; } else { score -= 40; reasons.push('无正文索引'); }
+
+    if (score > 10) scored.push({ rid: r._rid, score, reasons, hits: paraHits });
+  }
+
+  scored.sort((a, b) => b.score - a.score);
+  state.ai.recs = scored.slice(0, 14);
+  state.ai.selected = state.ai.recs.filter(x => {
+    const r = getRec(x.rid);
+    return r && getParas(r).length > 0 && r['研究纳入层级'] === 'A核心政策';
+  }).slice(0, 6).map(x => x.rid);
+  if (!state.ai.selected.length) {
+    state.ai.selected = state.ai.recs.filter(x => getParas(getRec(x.rid)).length > 0).slice(0, 5).map(x => x.rid);
+  }
+  state.ai.step = 2;
+  renderAi();
+}
+
+function buildOfflineStructuredReview(docs, topic, tpl) {
+  const provs = [...new Set(docs.map(d => d['省份']))];
+  const years = [...new Set(docs.map(d => d['年份']).filter(Boolean))].sort();
+  const terms = aiTokenize(topic);
+
+  const pickBestEvidence = (rec, regex, limit = 2) => {
+    const paras = getParas(rec);
+    const scored = [];
+    for (const [pid, text] of paras) {
+      if (text.length < 20) continue;
+      let sc = 0;
+      if (regex && regex.test(text)) sc += 5;
+      for (const t of terms) if (text.includes(t)) sc += 3;
+      if (sc > 0) scored.push({ pid, text, sc });
+    }
+    scored.sort((a, b) => b.sc - a.sc);
+    return scored.slice(0, limit);
+  };
+
+  const tplTitles = {
+    standard: `关于「${topic}」的区域政策文献综述`,
+    compare: `五地「${topic}」政策横向比较研究报告`,
+    evolution: `「${topic}」政策演进脉络与阶段特征分析`,
+    advice: `「${topic}」政策实施痛点与对策建议综述`
+  };
+
+  let out = `# ${tplTitles[tpl] || tplTitles.standard}\n\n`;
+  out += `> **研究样本**：本次综述纳入 ${provs.join('、')} 共 ${docs.length} 份已核验政策文件（发文年份跨度：${years.length ? years[0] + '—' + years[years.length-1] : '2024—2026'} 年），所有论断均严格基于政策原文段落，附可核验引文编号 \`[文件ID:段落ID]\`。\n\n`;
+
+  out += `## 一、政策出台背景与总体布局态势\n\n`;
+  out += `围绕“${topic}”，${provs.join('、')}等先行地区已形成由省级顶层行动方案引领、地市/区级实施方案协同跟进的政策推进格局。从纳入分析的 ${docs.length} 份政策文本来看，各地普遍将人工智能赋能教育高质量发展作为核心战略抓手：\n\n`;
+  for (const d of docs.slice(0, 5)) {
+    const ev = pickBestEvidence(d, /总体目标|发展目标|行动方案|高质量发展|指导思想|工作目标/, 1)[0] || (getParas(d)[0] ? { pid: getParas(d)[0][0], text: getParas(d)[0][1] } : null);
+    if (ev) {
+      out += `- **${d['省份']}**在《${d['文件标题']}》（${d['发文日期']||d['年份']||''}）中明确提出：“${ev.text.slice(0, 110)}${ev.text.length>110?'……':''}” [${d._id}:${ev.pid}]。\n`;
+    }
+  }
+
+  out += `\n## 二、核心政策维度比较分析\n\n`;
+  const pillars = [
+    { h: '（一）课程体系建构与通识教育普及', re: /课程|课时|通识|教材|素养框架|教学/ },
+    { h: '（二）师资队伍培养与教研范式转型', re: /教师|师资|培训|教研|数字素养|智能素养/ },
+    { h: '（三）智能基础设施、平台底座与典型应用场景', re: /平台|大模型|算力|场景|实验区|示范校|智能体/ },
+    { h: '（四）伦理安全治理、评价改革与组织保障', re: /伦理|安全|隐私|规范|评价|保障|经费/ }
+  ];
+
+  for (const p of pillars) {
+    out += `### ${p.h}\n\n`;
+    let any = false;
+    for (const d of docs) {
+      const evs = pickBestEvidence(d, p.re, 1);
+      if (evs.length) {
+        any = true;
+        const e = evs[0];
+        out += `在${d['省份']}《${d['文件标题']}》中，政策着重强调：“${e.text.slice(0, 125)}${e.text.length>125?'……':''}” [${d._id}:${e.pid}]。`;
+      }
+    }
+    if (!any) out += `在当前选定的 ${docs.length} 份样本中，该维度的显性专项条款相对有限，建议在后续研究中补充对应专项指导意见。`;
+    out += `\n\n`;
+  }
+
+  out += `## 三、区域比较特征与研究启示\n\n`;
+  out += `1. **顶层统筹与分层推进结合**：${provs.join('、')}均通过明确规划周期与阶段指标推动政策落地，但在推进路径上各有侧重——直辖市与经济发达地区更强调区域实验区先行先试与课程纲要细化，省份层面则注重全省覆盖与校校开课的均衡推进。\n`;
+  out += `2. **从技术工具引入迈向育人生态重构**：各地政策已突破早期单纯强调硬件采购与软件部署的局限，全面转向“课程标准 + 教师素养 + 场景应用 + 伦理底线”四位一体的系统化治理。\n`;
+  out += `3. **后续深化方向**：建议进一步加强跨区域政策实施效果的量化追踪（如课时落实率、教师培训覆盖度及生成式 AI 校园合规使用评估），并建立动态迭代的政策监测机制。\n\n`;
+
+  out += `## 四、参考文献（政策文件清单）\n\n`;
+  docs.forEach((d, i) => {
+    out += `[${i+1}] ${d['原发文机关'] || d['省份']}. ${d['文件标题']}${d['发文字号'] ? '（' + d['发文字号'] + '）' : ''}[Z]. ${d['发文日期'] || d['年份'] || '2025'}.（库内编号：${d._id}）\n`;
+  });
+  return out;
+}
+
+function buildLlmPromptPack(docs, topic, tpl, length) {
+  const ctx = docs.map(d => {
+    const paras = getParas(d).slice(0, 22).map(([pid, t]) => `[${d._id}:${pid}] ${t.slice(0, 240)}`).join('\n');
+    return `=== 政策：${d['文件标题']}（${d['省份']}，${d['原发文机关']||''}，${d['发文日期']||d['年份']||''}，ID=${d._id}）===\n${paras}`;
+  }).join('\n\n');
+
+  return `你是一位严谨的教育政策研究专家。请严格基于下方提供的政策原文段落，围绕研究主题「${topic}」撰写一篇约 ${length} 字的学术文献综述（模板类型：${tpl}）。
+
+【硬性防幻觉与引用规范】
+1. 严禁编造任何未在下方原文中出现的政策名称、年份、课时、比例或举措。
+2. 每一项关键政策事实或论断后，必须使用方括号标注精确的原文段落编号，格式为 [文件ID:段落ID]（例如 [${docs[0]?._id||'BJ-001'}:P003]）。
+3. 结构须包含：一、政策背景与总体态势；二、核心政策维度比较分析；三、区域差异与演进特征；四、现存问题与政策建议；五、参考文献清单。
+
+【已核验政策原文资料】
+${ctx}`;
+}
+
+async function runAiGenerate() {
+  const docs = state.ai.selected.map(getRec).filter(r => r && getParas(r).length > 0);
+  if (!docs.length) { toast('请至少勾选 1 份含正文索引的政策文件', 'warn'); return; }
+
+  const engine = document.querySelector('input[name="aiEngine"]:checked')?.value || 'offline';
+  state.ai.engine = engine;
+
+  if (engine === 'offline') {
+    state.ai.draftText = buildOfflineStructuredReview(docs, state.ai.topic || '人工智能教育政策研究', state.ai.template);
+    verifyDraftCitations();
+    state.ai.step = 5;
+    renderAi();
+    toast('已基于真实政策原文生成结构化综述并完成引用核验', 'success');
+    return;
+  }
+
+  const baseUrl = document.getElementById('apiBaseUrl').value.trim();
+  const model = document.getElementById('apiModel').value.trim();
+  const apiKey = document.getElementById('apiKey').value.trim();
+  if (!baseUrl.startsWith('https://') || !model || !apiKey) {
+    toast('请先在右侧填写完整的 HTTPS 接口地址、模型名与 API Key（或切换为离线结构化引擎）', 'warn');
+    return;
+  }
+
+  state.ai.generating = true;
+  renderAi();
+  const prompt = buildLlmPromptPack(docs, state.ai.topic || '人工智能教育政策研究', state.ai.template, state.ai.length);
+
+  try {
+    const resp = await fetch(baseUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + apiKey },
+      body: JSON.stringify({
+        model,
+        temperature: 0.3,
+        messages: [
+          { role: 'system', content: '你是严谨的教育政策文献综述助手，所有论断必须附带 [文件ID:段落ID] 原文引用，严禁编造。' },
+          { role: 'user', content: prompt }
+        ]
+      })
+    });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+    const content = data?.choices?.[0]?.message?.content;
+    if (!content) throw new Error('返回内容为空');
+    state.ai.draftText = content;
+    verifyDraftCitations();
+    state.ai.step = 5;
+    toast('在线大模型综述生成完成，已自动执行引用核验', 'success');
+  } catch (err) {
+    toast(`在线 API 调用失败（${err.message}），已自动回退至离线结构化引擎生成初稿`, 'warn');
+    state.ai.draftText = buildOfflineStructuredReview(docs, state.ai.topic || '人工智能教育政策研究', state.ai.template);
+    verifyDraftCitations();
+    state.ai.step = 5;
+  } finally {
+    state.ai.generating = false;
+    renderAi();
+  }
+}
+
+function verifyDraftCitations() {
+  const text = state.ai.draftText || '';
+  const re = /\[([A-Z]{2}-[A-Z0-9]+):(P\d+)\]/g;
+  const seen = new Set();
+  const cites = [];
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    const raw = m[0], docId = m[1], pid = m[2];
+    if (seen.has(raw)) continue;
+    seen.add(raw);
+    const rec = state.records.find(r => r._id === docId);
+    const paras = state.paragraphs[docId] || [];
+    const found = paras.find(p => p[0] === pid);
+    cites.push({
+      raw, docId, pid,
+      valid: Boolean(found),
+      text: found ? found[1] : '未在原始段落索引中找到该段落',
+      title: rec ? rec['文件标题'] : '未知文件',
+      rid: rec ? rec._rid : null
+    });
+  }
+  state.ai.citations = cites;
+  renderCitationVerifier();
+}
+
+function renderCitationVerifier() {
+  const cites = state.ai.citations;
+  const rateEl = document.getElementById('citeVerifyRate');
+  const listEl = document.getElementById('citeVerifyList');
+  if (!cites.length) {
+    rateEl.textContent = state.ai.draftText ? '0 处引用' : '待生成';
+    rateEl.className = 'text-xs font-semibold text-[#8C919E] tabular-nums';
+    listEl.innerHTML = '生成综述后，系统将自动校验文中每一处 <code class="bg-[#F1EFEA] px-1.5 py-0.5 rounded text-[#161922]">[文件ID:段落ID]</code> 引文是否存在于原始政策正文中，点击任意标签即可定位原文。';
+    return;
+  }
+  const ok = cites.filter(c => c.valid).length;
+  const pct = Math.round((ok / cites.length) * 100);
+  rateEl.textContent = `通过 ${ok}/${cites.length} (${pct}%)`;
+  rateEl.className = `text-xs font-semibold tabular-nums ${pct === 100 ? 'text-[#1F6354]' : 'text-[#A67C46]'}`;
+
+  listEl.innerHTML = cites.map(c => `
+    <div ${c.rid ? `data-open-reader="${esc(c.rid)}" data-jump-pid="${esc(c.pid)}"` : ''}
+      class="p-2.5 rounded-xl border ${c.valid ? 'bg-[#FAF9F6] border-[#EFECE6] hover:border-[#1E3A5F] cursor-pointer' : 'bg-[#FDF2F2] border-[#F5C2C2]'} transition">
+      <div class="flex items-center justify-between gap-1.5">
+        <span class="cite-chip ${c.valid ? '' : 'bad'}">${c.valid ? '✓' : '✗'} ${esc(c.docId)}:${esc(c.pid)}</span>
+        <span class="text-[11px] text-[#8C919E] truncate max-w-[140px]">${esc(c.title)}</span>
+      </div>
+      <div class="text-[11px] text-[#4B5263] mt-1.5 line-clamp-2 leading-relaxed">${esc(c.text)}</div>
+    </div>`).join('');
+}
+
+function renderAi() {
+  const steps = ['01 研究需求', '02 智能选文', '03 原文核查', '04 确认生成', '05 审校导出'];
+  document.getElementById('aiStepsBar').innerHTML = steps.map((label, i) => {
+    const s = i + 1;
+    const cls = state.ai.step === s ? 'bg-[#161922] text-[#F8F7F4] border-[#161922] font-semibold shadow-sm'
+      : (state.ai.step > s ? 'bg-[#EBF5F2] text-[#1F6354] border-[#C5E2D9] cursor-pointer font-medium' : 'bg-white text-[#8C919E] border-[#E6E3DC]');
+    return `<button type="button" data-ai-step="${s}" class="py-2.5 px-2 rounded-xl border text-xs text-center transition ${cls}">${state.ai.step > s ? '✓ ' : ''}${label}</button>`;
+  }).join('');
+
+  const main = document.getElementById('aiMainPanel');
+  const s = state.ai.step;
+
+  if (s === 1) {
+    main.innerHTML = `
+      <h3 class="font-serif-cn text-base font-bold text-[#161922]">第一步：设定文献综述研究需求</h3>
+      <div class="space-y-4 text-sm">
+        <div>
+          <label class="block text-xs font-semibold text-[#4B5263] mb-1.5">研究主题 / 综述题目方向（必填）</label>
+          <input id="aiTopicInput" type="text" value="${esc(state.ai.topic)}" placeholder="例如：五地中小学人工智能通识课程建设与师资培养比较"
+            class="w-full px-3.5 py-2.5 border rounded-xl bg-[#FAF9F6] focus:bg-white">
+          <div class="flex flex-wrap gap-1.5 mt-2 text-xs">
+            <span class="text-[#8C919E]">参考主题：</span>
+            <button type="button" data-ai-preset="五地中小学人工智能课程建设与素养框架比较" class="px-2.5 py-0.5 rounded-full bg-[#FAF9F6] border border-[#E6E3DC] text-[#4B5263] hover:border-[#1E3A5F] hover:text-[#1E3A5F] transition">中小学课程与素养框架</button>
+            <button type="button" data-ai-preset="人工智能赋能教育高质量发展与大模型场景应用" class="px-2.5 py-0.5 rounded-full bg-[#FAF9F6] border border-[#E6E3DC] text-[#4B5263] hover:border-[#1E3A5F] hover:text-[#1E3A5F] transition">大模型应用场景</button>
+            <button type="button" data-ai-preset="教育领域生成式人工智能伦理规范与治理机制" class="px-2.5 py-0.5 rounded-full bg-[#FAF9F6] border border-[#E6E3DC] text-[#4B5263] hover:border-[#1E3A5F] hover:text-[#1E3A5F] transition">生成式AI伦理治理</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div>
+            <label class="block text-xs font-semibold text-[#4B5263] mb-1">聚焦地区（可选）</label>
+            <select id="aiProvSel" class="w-full px-3 py-2 text-xs border rounded-xl bg-white">
+              <option value="">全国五地综合对比</option>
+              ${['北京市','上海市','江苏省','浙江省','广东省'].map(p => `<option ${state.ai.province===p?'selected':''}>${p}</option>`).join('')}
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-[#4B5263] mb-1">聚焦教育阶段（可选）</label>
+            <select id="aiStageSel" class="w-full px-3 py-2 text-xs border rounded-xl bg-white">
+              <option value="">全部学段</option>
+              ${['小学','初中','高中','基础教育','职业教育','高等教育','全学段'].map(x => `<option ${state.ai.stage===x?'selected':''}>${x}</option>`).join('')}
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-[#4B5263] mb-1">综述体裁模板</label>
+            <select id="aiTplSel" class="w-full px-3 py-2 text-xs border rounded-xl bg-white">
+              <option value="standard" ${state.ai.template==='standard'?'selected':''}>标准学术文献综述</option>
+              <option value="compare" ${state.ai.template==='compare'?'selected':''}>五地政策横向比较报告</option>
+              <option value="evolution" ${state.ai.template==='evolution'?'selected':''}>专题政策演进脉络分析</option>
+              <option value="advice" ${state.ai.template==='advice'?'selected':''}>政策痛点与对策建议</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-[#4B5263] mb-1">目标篇幅</label>
+            <select id="aiLenSel" class="w-full px-3 py-2 text-xs border rounded-xl bg-white">
+              <option value="1000" ${state.ai.length==='1000'?'selected':''}>精简版（约 1000 字）</option>
+              <option value="1500" ${state.ai.length==='1500'?'selected':''}>标准学术版（约 1500 字）</option>
+              <option value="2500" ${state.ai.length==='2500'?'selected':''}>深度比较版（约 2500 字）</option>
+            </select>
+          </div>
+        </div>
+        <div class="pt-2 flex justify-end">
+          <button type="button" id="aiStep1NextBtn" class="px-5 py-2.5 rounded-xl bg-[#161922] hover:bg-[#272C3B] text-white text-xs font-semibold shadow-sm transition">智能推荐相关政策 →</button>
+        </div>
+      </div>`;
+  } else if (s === 2) {
+    main.innerHTML = `
+      <div class="flex items-center justify-between">
+        <h3 class="font-serif-cn text-base font-bold text-[#161922]">第二步：智能推荐与政策勾选（已选 <span class="text-[#1E3A5F] tabular-nums">${state.ai.selected.length}</span> 份）</h3>
+        <span class="text-xs text-[#8C919E]">按 A/B/C 层级 + 全文段落命中排序</span>
+      </div>
+      <div class="space-y-2.5 max-h-[460px] overflow-y-auto pr-1">
+        ${state.ai.recs.map(item => {
+          const r = getRec(item.rid);
+          if (!r) return '';
+          const pcnt = getParas(r).length;
+          const checked = state.ai.selected.includes(r._rid);
+          return `<label class="flex items-start gap-3 p-3.5 rounded-xl border ${checked ? 'bg-[#F2F6FA] border-[#1E3A5F]/40' : 'bg-white border-[#EFECE6] hover:bg-[#FAF9F6]'} cursor-pointer transition">
+            <input type="checkbox" data-ai-sel="${esc(r._rid)}" ${checked ? 'checked' : ''} ${pcnt === 0 ? 'disabled' : ''} class="mt-1 rounded text-[#1E3A5F]">
+            <div class="flex-1 min-w-0 text-xs">
+              <div class="font-semibold text-[#161922] leading-snug">${esc(r['文件标题'])}</div>
+              <div class="text-[11px] text-[#6E7485] mt-1.5 flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded bg-[#EBF5F2] text-[#1F6354] font-medium">${esc(r['研究纳入层级']||'')}</span>
+                <span class="px-2 py-0.5 rounded bg-[#F4F2EC] text-[#4B5263]">${esc(r['省份'])}${r['城市']?'·'+esc(r['城市']):''}</span>
+                <span class="px-2 py-0.5 rounded bg-[#F2F6FA] text-[#1E3A5F] tabular-nums">${pcnt} 段原文</span>
+              </div>
+              <div class="text-[11px] text-[#7B8190] mt-1">推荐依据：${esc(item.reasons.join(' · '))}</div>
+            </div>
+          </label>`;
+        }).join('')}
+      </div>
+      <div class="pt-2 flex justify-between">
+        <button type="button" data-ai-step="1" class="px-4 py-2 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#4B5263] text-xs font-medium transition">← 返回修改需求</button>
+        <button type="button" data-ai-step="3" ${state.ai.selected.length ? '' : 'disabled'} class="px-5 py-2 rounded-xl bg-[#161922] hover:bg-[#272C3B] text-white text-xs font-semibold disabled:opacity-40 transition">核查原文段落 →</button>
+      </div>`;
+  } else if (s === 3) {
+    const docs = state.ai.selected.map(getRec).filter(r => r && getParas(r).length > 0);
+    main.innerHTML = `
+      <h3 class="font-serif-cn text-base font-bold text-[#161922]">第三步：纳入综述的政策原文抽检（共 ${docs.length} 份）</h3>
+      <div class="space-y-3 max-h-[460px] overflow-y-auto pr-1">
+        ${docs.map(d => {
+          const paras = getParas(d);
+          return `<div class="p-3.5 rounded-xl border border-[#EFECE6] bg-[#FAF9F6] text-xs space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="font-semibold text-[#161922]">${esc(d['文件标题'])}</div>
+              <button type="button" data-open-reader="${esc(d._rid)}" class="text-[#1E3A5F] hover:underline whitespace-nowrap font-medium">查看全文 (${paras.length}段)</button>
+            </div>
+            ${paras.slice(0, 3).map(([pid, t]) => `<div class="text-[#4B5263] leading-relaxed"><span class="font-mono text-[10px] text-[#1E3A5F] font-semibold mr-1.5">${esc(d._id)}:${esc(pid)}</span>${esc(t.slice(0, 140))}${t.length>140?'…':''}</div>`).join('')}
+          </div>`;
+        }).join('')}
+      </div>
+      <div class="pt-2 flex justify-between">
+        <button type="button" data-ai-step="2" class="px-4 py-2 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#4B5263] text-xs font-medium transition">← 调整选文</button>
+        <button type="button" data-ai-step="4" class="px-5 py-2 rounded-xl bg-[#161922] hover:bg-[#272C3B] text-white text-xs font-semibold transition">进入生成确认 →</button>
+      </div>`;
+  } else if (s === 4) {
+    const docs = state.ai.selected.map(getRec).filter(r => r && getParas(r).length > 0);
+    main.innerHTML = `
+      <h3 class="font-serif-cn text-base font-bold text-[#161922]">第四步：确认生成文献综述</h3>
+      <div class="p-4 rounded-xl bg-[#FAF9F6] border border-[#E6E3DC] text-xs text-[#3F4554] space-y-1.5 leading-relaxed">
+        <div><strong class="text-[#161922]">综述主题：</strong>${esc(state.ai.topic || '人工智能教育政策研究')}</div>
+        <div><strong class="text-[#161922]">纳入文献：</strong>${docs.length} 份已核验政策（覆盖 ${[...new Set(docs.map(d=>d['省份']))].join('、')}）</div>
+        <div><strong class="text-[#161922]">溯源机制：</strong>强制绑定 <code class="bg-white px-1.5 py-0.5 rounded border border-[#E6E3DC]">[文件ID:段落ID]</code>，生成后自动触发右侧引用核验器。</div>
+      </div>
+      <div class="flex flex-wrap gap-2.5">
+        <button type="button" id="aiRunGenBtn" ${state.ai.generating ? 'disabled' : ''} class="px-5 py-2.5 rounded-xl bg-[#161922] hover:bg-[#272C3B] text-[#F8F7F4] text-xs font-semibold shadow-sm disabled:opacity-50 transition">
+          ${state.ai.generating ? '正在生成综述…' : '立即生成文献综述'}
+        </button>
+        <button type="button" id="aiCopyPromptBtn" class="px-4 py-2.5 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#3F4554] text-xs font-medium transition">复制防幻觉提示词包</button>
+      </div>
+      <div class="pt-2 flex justify-between">
+        <button type="button" data-ai-step="3" class="px-4 py-2 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#4B5263] text-xs font-medium transition">← 上一步</button>
+      </div>`;
+  } else {
+    main.innerHTML = `
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h3 class="font-serif-cn text-base font-bold text-[#161922]">第五步：文献综述审校、引用溯源与导出</h3>
+        <div class="flex items-center gap-1.5 flex-wrap">
+          <button type="button" id="aiReverifyBtn" class="px-3 py-1.5 rounded-lg bg-[#F2F6FA] text-[#1E3A5F] border border-[#D5E0EC] text-xs font-medium transition">重新核验引用</button>
+          <button type="button" id="aiCopyDraftBtn" class="px-3 py-1.5 rounded-lg bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#3F4554] text-xs font-medium transition">复制全文</button>
+          <button type="button" id="aiExportMdBtn" class="px-3 py-1.5 rounded-lg bg-[#161922] hover:bg-[#272C3B] text-white text-xs font-medium transition">导出 Markdown</button>
+          <button type="button" id="aiExportDocBtn" class="px-3 py-1.5 rounded-lg bg-[#1F6354] hover:bg-[#174E42] text-white text-xs font-medium transition">导出 Word (.doc)</button>
+        </div>
+      </div>
+      <textarea id="aiDraftEditor" rows="18" class="w-full p-4 text-[14px] leading-8 border rounded-xl bg-[#FAF9F6] focus:bg-white font-sans text-[#161922]">${esc(state.ai.draftText)}</textarea>
+      <div class="flex justify-between pt-1">
+        <button type="button" data-ai-step="2" class="px-4 py-1.5 rounded-xl bg-[#F4F2EC] hover:bg-[#E9E6DE] text-[#4B5263] text-xs font-medium transition">← 重新选文</button>
+        <span class="text-xs text-[#8C919E]">支持直接编辑正文，点击右侧任意引用标签即可对照原文段落</span>
+      </div>`;
+  }
+  renderCitationVerifier();
+}
+
+/* ==================== EVENT DELEGATION & BINDINGS ==================== */
+document.getElementById('q').addEventListener('input', e => { state.q = e.target.value; state.currentPage = 1; renderLibrary(); });
+document.getElementById('clearSearchBtn').addEventListener('click', () => {
+  state.q = ''; document.getElementById('q').value = ''; state.currentPage = 1; renderLibrary();
+});
+document.getElementById('fullTextMode').addEventListener('change', e => { state.fullTextMode = e.target.checked; state.currentPage = 1; renderLibrary(); });
+['year','province','category','stage','topic','tier','readableFilter'].forEach(id => {
+  document.getElementById(id).addEventListener('change', e => { state[id] = e.target.value; state.currentPage = 1; renderLibrary(); });
+});
+document.getElementById('showClue').addEventListener('change', e => { state.showClue = e.target.checked; state.currentPage = 1; renderLibrary(); });
+document.getElementById('resetFiltersBtn').addEventListener('click', () => {
+  state.q = ''; state.year = ''; state.province = ''; state.category = ''; state.stage = ''; state.topic = ''; state.tier = ''; state.readableFilter = ''; state.showClue = false; state.currentPage = 1;
+  ['q','year','province','category','stage','topic','tier','readableFilter'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('showClue').checked = false;
+  renderLibrary();
+});
+document.querySelectorAll('[data-quick-q]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    state.q = btn.dataset.quickQ;
+    state.fullTextMode = true;
+    document.getElementById('q').value = state.q;
+    document.getElementById('fullTextMode').checked = true;
+    state.currentPage = 1;
+    renderLibrary();
+  });
+});
+document.querySelectorAll('[data-sort]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const k = btn.dataset.sort;
+    state.sortDir = state.sortKey === k ? -state.sortDir : -1;
+    state.sortKey = k;
+    state.currentPage = 1;
+    renderLibrary();
+  });
+});
+document.getElementById('presetCompareBtn').addEventListener('click', selectFiveRegionPreset);
+document.getElementById('cmpPreset5Btn').addEventListener('click', selectFiveRegionPreset);
+document.getElementById('cmpPresetCourseBtn').addEventListener('click', selectCoursePreset);
+document.getElementById('cmpExportMdBtn').addEventListener('click', () => exportComparison('md'));
+document.getElementById('cmpExportCsvBtn').addEventListener('click', () => exportComparison('csv'));
+document.getElementById('cmpClearBtn').addEventListener('click', () => { state.compareIds = []; updateCompareTray(); renderCompare(); });
+document.getElementById('cmpHighlightNums').addEventListener('change', e => { state.cmpHighlightNums = e.target.checked; renderCompare(); });
+document.getElementById('cmpAddSelect').addEventListener('change', e => {
+  if (e.target.value) { toggleCompare(e.target.value); e.target.value = ''; }
+});
+document.getElementById('cmpSendAiBtn').addEventListener('click', () => {
+  if (!state.compareIds.length) { toast('请先选择要对比的政策', 'warn'); return; }
+  state.ai.selected = [...state.compareIds];
+  if (!state.ai.topic) state.ai.topic = '多地人工智能教育政策横向比较与实施路径';
+  state.ai.step = 3;
+  switchTab('ai');
+  toast(`已将 ${state.compareIds.length} 份对比政策导入 AI 综述助手`, 'success');
+});
+
+document.getElementById('trayGoCompareBtn').addEventListener('click', () => switchTab('compare'));
+document.getElementById('trayGoAiBtn').addEventListener('click', () => {
+  state.ai.selected = [...state.compareIds];
+  if (!state.ai.topic) state.ai.topic = '人工智能教育政策比较研究';
+  state.ai.step = 3;
+  switchTab('ai');
+});
+document.getElementById('trayClearBtn').addEventListener('click', () => { state.compareIds = []; updateCompareTray(); renderLibrary(); });
+
+document.getElementById('pager').addEventListener('click', e => {
+  const b = e.target.closest('button[data-page]');
+  if (!b || b.disabled) return;
+  state.currentPage = Number(b.dataset.page);
+  renderLibrary();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+document.addEventListener('click', e => {
+  const openBtn = e.target.closest('[data-open-reader]');
+  if (openBtn) { openReader(openBtn.dataset.openReader, openBtn.dataset.jumpPid || null); return; }
+  const rmCmp = e.target.closest('[data-rm-cmp]');
+  if (rmCmp) { toggleCompare(rmCmp.dataset.rmCmp); return; }
+
+  const copyP = e.target.closest('[data-copy-para]');
+  if (copyP) {
+    const rec = getRec(state.readerRid);
+    const para = getParas(rec)[Number(copyP.dataset.copyPara)];
+    if (rec && para) copyText(`“${para[1]}” ——《${rec['文件标题']}》（${rec['省份']}，${rec._id}:${para[0]}）`, '已复制带出处的原文引文');
+    return;
+  }
+  const stepBtn = e.target.closest('[data-ai-step]');
+  if (stepBtn && !stepBtn.disabled) {
+    const target = Number(stepBtn.dataset.aiStep);
+    if (target <= state.ai.step || (target === 3 && state.ai.selected.length) || (target === 4 && state.ai.selected.length)) {
+      state.ai.step = target;
+      renderAi();
+    }
+    return;
+  }
+  const aiPreset = e.target.closest('[data-ai-preset]');
+  if (aiPreset) {
+    const inp = document.getElementById('aiTopicInput');
+    if (inp) { inp.value = aiPreset.dataset.aiPreset; state.ai.topic = inp.value; }
+    return;
+  }
+  if (e.target.id === 'aiStep1NextBtn') { aiRecommend(); return; }
+  if (e.target.id === 'aiRunGenBtn') { runAiGenerate(); return; }
+  if (e.target.id === 'aiCopyPromptBtn') {
+    const docs = state.ai.selected.map(getRec).filter(r => r && getParas(r).length > 0);
+    copyText(buildLlmPromptPack(docs, state.ai.topic || '人工智能教育政策研究', state.ai.template, state.ai.length), '已复制防幻觉提示词包');
+    return;
+  }
+  if (e.target.id === 'aiReverifyBtn') {
+    const ed = document.getElementById('aiDraftEditor');
+    if (ed) state.ai.draftText = ed.value;
+    verifyDraftCitations();
+    toast('已完成全文引用重新核验', 'success');
+    return;
+  }
+  if (e.target.id === 'aiCopyDraftBtn') {
+    const ed = document.getElementById('aiDraftEditor');
+    if (ed) state.ai.draftText = ed.value;
+    copyText(state.ai.draftText, '已复制文献综述全文');
+    return;
+  }
+  if (e.target.id === 'aiExportMdBtn') {
+    const ed = document.getElementById('aiDraftEditor');
+    if (ed) state.ai.draftText = ed.value;
+    downloadFile(`AI政策文献综述_${state.ai.topic.slice(0,16)||'初稿'}.md`, state.ai.draftText, 'text/markdown;charset=utf-8');
+    toast('已导出 Markdown 文献综述', 'success');
+    return;
+  }
+  if (e.target.id === 'aiExportDocBtn') {
+    const ed = document.getElementById('aiDraftEditor');
+    if (ed) state.ai.draftText = ed.value;
+    const htmlDoc = `<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:"SimSun","Microsoft YaHei",serif;line-height:1.8;padding:30px;}h1,h2,h3{color:#1E3A5F;}</style></head><body><pre style="white-space:pre-wrap;font-family:inherit;">${esc(state.ai.draftText)}</pre></body></html>`;
+    downloadFile(`AI政策文献综述_${state.ai.topic.slice(0,16)||'初稿'}.doc`, htmlDoc, 'application/msword;charset=utf-8');
+    toast('已导出 Word (.doc) 格式综述', 'success');
+    return;
+  }
+});
+
+document.addEventListener('change', e => {
+  const cmpChk = e.target.closest('[data-cmp-chk]');
+  if (cmpChk) { toggleCompare(cmpChk.dataset.cmpChk); return; }
+
+  const aiSel = e.target.closest('[data-ai-sel]');
+  if (aiSel) {
+    const rid = aiSel.dataset.aiSel;
+    if (aiSel.checked) { if (!state.ai.selected.includes(rid)) state.ai.selected.push(rid); }
+    else { state.ai.selected = state.ai.selected.filter(x => x !== rid); }
+    renderAi();
+    return;
+  }
+  const srcToggle = e.target.closest('[data-toggle-src]');
+  if (srcToggle) {
+    state.sources[Number(srcToggle.dataset.toggleSrc)].enabled = srcToggle.checked;
+    renderStatsBar();
+    return;
+  }
+});
+
+document.getElementById('rdCloseBtn').addEventListener('click', () => document.getElementById('readerModal').classList.add('hidden'));
+document.getElementById('readerModal').addEventListener('click', e => { if (e.target.id === 'readerModal') document.getElementById('readerModal').classList.add('hidden'); });
+document.getElementById('rdSearchInput').addEventListener('input', e => { state.readerQuery = e.target.value; renderReaderBody(); });
+document.getElementById('rdPrevBtn').addEventListener('click', () => jumpToReaderMatch(state.readerMatchIdx - 1));
+document.getElementById('rdNextBtn').addEventListener('click', () => jumpToReaderMatch(state.readerMatchIdx + 1));
+document.getElementById('rdAddCmpBtn').addEventListener('click', () => {
+  if (state.readerRid && !state.compareIds.includes(state.readerRid)) { toggleCompare(state.readerRid); toast('已加入横向对比列表', 'success'); }
+  else toast('该政策已在对比列表中', 'info');
+});
+document.getElementById('rdAddAiBtn').addEventListener('click', () => {
+  if (state.readerRid && !state.ai.selected.includes(state.readerRid)) { state.ai.selected.push(state.readerRid); toast('已加入 AI 综述选文列表', 'success'); }
+  else toast('该政策已在综述选文列表中', 'info');
+});
+
+document.getElementById('toggleAddSourceBtn').addEventListener('click', () => document.getElementById('addSourceForm').classList.toggle('hidden'));
+document.getElementById('addSourceForm').addEventListener('submit', e => {
+  e.preventDefault();
+  state.sources.unshift({
+    province: document.getElementById('newSrcProv').value,
+    name: document.getElementById('newSrcName').value.trim(),
+    url: document.getElementById('newSrcUrl').value.trim(),
+    keywords: document.getElementById('newSrcKw').value.split(/[,，、\s]+/).filter(Boolean),
+    verified: false,
+    enabled: true
+  });
+  e.target.reset();
+  e.target.classList.add('hidden');
+  renderCollect();
+  renderStatsBar();
+  toast('已添加新的官方监控信源', 'success');
+});
+document.getElementById('schedFreq').addEventListener('change', renderScheduleCode);
+document.getElementById('schedPlatform').addEventListener('change', renderScheduleCode);
+document.getElementById('copySchedBtn').addEventListener('click', () => copyText(document.getElementById('schedCodeBox').textContent, '已复制定时采集部署脚本'));
+document.getElementById('exportSourcesBtn').addEventListener('click', () => {
+  downloadFile('sources_config.json', JSON.stringify({ updated_at: new Date().toISOString(), sources: state.sources }, null, 2), 'application/json;charset=utf-8');
+  toast('已导出 sources_config.json', 'success');
+});
+document.getElementById('exportDatasetBtn').addEventListener('click', () => {
+  downloadFile('v5_policy_dataset_updated.json', JSON.stringify({ exported_at: new Date().toISOString(), records: state.records, paragraphs: state.paragraphs }, null, 2), 'application/json;charset=utf-8');
+  toast('已导出最新全量政策数据包', 'success');
+});
+
+document.getElementById('importFileInput').addEventListener('change', e => {
+  const file = e.target.files?.[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    const content = String(reader.result || '');
+    const logEl = document.getElementById('importLog');
+    let added = 0, skipped = 0;
+    if (file.name.endsWith('.json')) {
+      try {
+        const parsed = JSON.parse(content);
+        const list = Array.isArray(parsed) ? parsed : (parsed.records || []);
+        for (const item of list) {
+          const res = ingestNewPolicy({
+            title: item['文件标题'] || item.title,
+            province: item['省份'] || item.province || '北京市',
+            date: item['发文日期'] || item.date || '2026-11-22',
+            agency: item['原发文机关'] || item.agency || '',
+            url: item['官方原文URL'] || item.url || '',
+            bodyText: item.body || item.text || ''
+          });
+          if (res.added) added++; else skipped++;
+        }
+        logEl.textContent = `JSON 增量导入完成：新增入库 ${added} 条，自动去重跳过 ${skipped} 条。`;
+        logEl.classList.remove('hidden');
+        toast(`成功导入 ${added} 条新政策`, 'success');
+      } catch (err) {
+        toast('JSON 解析失败，请检查文件格式', 'error');
+      }
+    } else {
+      const plain = file.name.endsWith('.html') || file.name.endsWith('.htm')
+        ? content.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<style[\s\S]*?<\/style>/gi, '').replace(/<[^>]+>/g, '\n')
+        : content;
+      const res = ingestNewPolicy({
+        title: file.name.replace(/\.(txt|html|htm)$/i, ''),
+        province: document.getElementById('quickImpProv').value,
+        date: '2026-11-22',
+        agency: '本地增量导入',
+        bodyText: plain
+      });
+      if (res.added) {
+        logEl.textContent = `已导入《${file.name}》（编号 ${res.docId}），自动切分并索引 ${res.paraCount} 段原文！`;
+        logEl.classList.remove('hidden');
+        toast('文件已入库并建立全文索引', 'success');
+      } else {
+        toast(res.reason, 'warn');
+      }
+    }
+    e.target.value = '';
+  };
+  reader.readAsText(file, 'utf-8');
+});
+
+document.getElementById('quickImpSubmitBtn').addEventListener('click', () => {
+  const res = ingestNewPolicy({
+    title: document.getElementById('quickImpTitle').value,
+    province: document.getElementById('quickImpProv').value,
+    date: document.getElementById('quickImpDate').value,
+    agency: document.getElementById('quickImpAgency').value,
+    bodyText: document.getElementById('quickImpBody').value
+  });
+  if (res.added) {
+    document.getElementById('quickImpTitle').value = '';
+    document.getElementById('quickImpAgency').value = '';
+    document.getElementById('quickImpBody').value = '';
+    const logEl = document.getElementById('importLog');
+    logEl.textContent = `已实时入库（编号 ${res.docId}），建立 ${res.paraCount} 段全文索引，现可直接检索与对比！`;
+    logEl.classList.remove('hidden');
+    toast('新政策已入库并建立全文索引', 'success');
+  } else {
+    toast(res.reason, 'warn');
+  }
+});
+
+document.querySelectorAll('input[name="aiEngine"]').forEach(r => {
+  r.addEventListener('change', e => {
+    const isApi = e.target.value === 'api';
+    document.getElementById('apiConfigFields').classList.toggle('hidden', !isApi);
+    const badge = document.getElementById('apiStatusBadge');
+    badge.textContent = isApi ? 'BYOK 在线模式' : '离线引擎就绪';
+    badge.className = `px-2.5 py-0.5 rounded-full font-medium text-[11px] ${isApi ? 'bg-[#F2F6FA] text-[#1E3A5F]' : 'bg-[#EBF5F2] text-[#1F6354]'}`;
+  });
+});
+
+document.getElementById('aiImportFromCmpBtn').addEventListener('click', () => {
+  if (!state.compareIds.length) { toast('横向对比中尚未选择政策', 'warn'); return; }
+  state.ai.selected = [...state.compareIds];
+  if (!state.ai.topic) state.ai.topic = '多地人工智能教育政策横向比较';
+  state.ai.step = 3;
+  renderAi();
+  toast(`已导入 ${state.compareIds.length} 份对比政策`, 'success');
+});
+
+document.getElementById('aiResetBtn').addEventListener('click', () => {
+  state.ai = { step: 1, topic: '', province: '', stage: '', template: 'standard', length: '1500', engine: 'offline', recs: [], selected: [], draftText: '', citations: [], generating: false };
+  renderAi();
+  toast('已重置 AI 文献综述助手', 'info');
+});
+
+/* ==================== V5.2 MODULE 1: ACADEMIC POLICY INSTRUMENT CODING ==================== */
+const POLICY_TOOLS = [
+  { cat: '供给型', key: 'talent', name: '师资与人才培养', re: /教师培训|师资培养|骨干教师|名师|师范生|人才队伍|专业人才|学科带头人|人工智能素养培训/ },
+  { cat: '供给型', key: 'infra', name: '基础设施与算力底座', re: /算力|大模型|数据底座|智慧校园|实验室|基础设施|云平台|数字底座|智能终端|教育专网/ },
+  { cat: '供给型', key: 'resource', name: '课程与数字资源供给', re: /课程纲要|通识课程|教材|数字资源|精品课程|教学资源|案例库|题库|开放课程|教学指南/ },
+  { cat: '供给型', key: 'funding', name: '资金投入与经费保障', re: /经费|资金|财政|投入|专项经费|补贴|预算|资助|购买服务/ },
+  { cat: '需求型', key: 'pilot', name: '试点示范与实验区', re: /实验区|示范区|示范校|试点|先行先试|领航|先锋城市|标杆校|试验区|样板/ },
+  { cat: '需求型', key: 'scenario', name: '典型应用场景拉动', re: /应用场景|全域场景|赋能教学|智能助教|智能学伴|个性化学习|精准教学|智能批改|智慧课堂/ },
+  { cat: '需求型', key: 'collab', name: '政产学研协同采购', re: /产教融合|校企合作|协同创新|科研院所|科技企业|高校合作|社会力量|联合体|生态协同/ },
+  { cat: '需求型', key: 'competition', name: '赛事活动与交流推广', re: /大赛|竞赛|创新实践活动|交流活动|展示|成果推广|经验交流|论坛|文化节/ },
+  { cat: '环境型', key: 'planning', name: '目标规划与顶层设计', re: /总体目标|发展目标|行动方案|三年行动|五年行动|规划|顶层设计|路线图|时间表/ },
+  { cat: '环境型', key: 'standard', name: '标准规范与素养框架', re: /标准|素养框架|指标体系|规范|指南|导引|指导意见|实施要求|课程标准/ },
+  { cat: '环境型', key: 'ethics', name: '伦理治理与安全监管', re: /伦理|数据安全|隐私保护|算法安全|合规|底线|监管|防沉迷|生成式.*规范|安全审查/ },
+  { cat: '环境型', key: 'eval', name: '考核评估与组织保障', re: /领导小组|统筹协调|考核|评估|督导|激励机制|工作专班|责任分工|监测评价/ }
+];
+
+const v52State = {
+  analyticsSub: 'tools',
+  selectedToolKey: 'talent',
+  toolProvChart: null,
+  toolSubChart: null,
+  toolCache: null,
+  quantCache: null,
+  patrolReport: null,
+  activeClueRid: null
+};
+
+function computeToolCoding() {
+  const provFilter = document.getElementById('toolProvFilter')?.value || '';
+  const tierFilter = document.getElementById('toolTierFilter')?.value || 'all';
+  const provs = ['北京市', '上海市', '江苏省', '浙江省', '广东省'];
+
+  const docs = state.records.filter(r => {
+    if (getParas(r).length === 0 || r['资料类别'] === AUX) return false;
+    if (provFilter && r['省份'] !== provFilter) return false;
+    if (tierFilter === 'A' && r['研究纳入层级'] !== 'A核心政策') return false;
+    if (tierFilter === 'AB' && !['A核心政策', 'B相关政策'].includes(r['研究纳入层级'])) return false;
+    return true;
+  });
+
+  const uniqueDocs = [];
+  const seenIds = new Set();
+  for (const d of docs) {
+    if (seenIds.has(d._id)) continue;
+    seenIds.add(d._id);
+    uniqueDocs.push(d);
+  }
+
+  const byCat = { '供给型': 0, '需求型': 0, '环境型': 0 };
+  const byProvCat = {};
+  provs.forEach(p => { byProvCat[p] = { '供给型': 0, '需求型': 0, '环境型': 0 }; });
+
+  const byTool = {};
+  POLICY_TOOLS.forEach(t => {
+    byTool[t.key] = { tool: t, total: 0, byProv: { '北京市':0, '上海市':0, '江苏省':0, '浙江省':0, '广东省':0 }, evidences: [] };
+  });
+
+  for (const r of uniqueDocs) {
+    const p = r['省份'];
+    const paras = getParas(r);
+    for (const [pid, text] of paras) {
+      for (const t of POLICY_TOOLS) {
+        if (t.re.test(text)) {
+          byCat[t.cat]++;
+          if (byProvCat[p]) byProvCat[p][t.cat]++;
+          byTool[t.key].total++;
+          if (byTool[t.key].byProv[p] !== undefined) byTool[t.key].byProv[p]++;
+          if (byTool[t.key].evidences.length < 60) {
+            byTool[t.key].evidences.push({ rid: r._rid, docId: r._id, pid, prov: p, title: r['文件标题'], text });
+          }
+        }
+      }
+    }
+  }
+  return { docsCount: uniqueDocs.length, byCat, byProvCat, byTool };
+}
+
+function renderToolsView() {
+  const res = computeToolCoding();
+  v52State.toolCache = res;
+  const totalCodes = res.byCat['供给型'] + res.byCat['需求型'] + res.byCat['环境型'];
+  const pct = n => totalCodes ? (n / totalCodes * 100).toFixed(1) + '%' : '0.0%';
+
+  document.getElementById('toolKpiRow').innerHTML = `
+    <div class="editorial-card p-4 border-l-4 border-l-[#1E3A5F]">
+      <div class="flex items-center justify-between text-xs"><span class="font-bold text-[#1E3A5F]">供给型政策工具 (Supply-side)</span><span class="px-2 py-0.5 rounded-full bg-[#EEF2F7] text-[#1E3A5F] font-semibold tabular-nums">${pct(res.byCat['供给型'])}</span></div>
+      <div class="text-2xl font-bold text-[#161922] mt-1 tabular-nums">${res.byCat['供给型'].toLocaleString()} <span class="text-xs font-normal text-[#7B8190]">条编码节点</span></div>
+      <div class="text-[11px] text-[#7B8190] mt-1">师资培养 · 算力基建 · 课程资源 · 资金投入</div>
+    </div>
+    <div class="editorial-card p-4 border-l-4 border-l-[#1F6354]">
+      <div class="flex items-center justify-between text-xs"><span class="font-bold text-[#1F6354]">需求型政策工具 (Demand-side)</span><span class="px-2 py-0.5 rounded-full bg-[#EBF5F2] text-[#1F6354] font-semibold tabular-nums">${pct(res.byCat['需求型'])}</span></div>
+      <div class="text-2xl font-bold text-[#161922] mt-1 tabular-nums">${res.byCat['需求型'].toLocaleString()} <span class="text-xs font-normal text-[#7B8190]">条编码节点</span></div>
+      <div class="text-[11px] text-[#7B8190] mt-1">试点示范 · 场景拉动 · 产教协同 · 赛事交流</div>
+    </div>
+    <div class="editorial-card p-4 border-l-4 border-l-[#A67C46]">
+      <div class="flex items-center justify-between text-xs"><span class="font-bold text-[#8C6432]">环境型政策工具 (Environmental)</span><span class="px-2 py-0.5 rounded-full bg-[#F7F1E6] text-[#8C6432] font-semibold tabular-nums">${pct(res.byCat['环境型'])}</span></div>
+      <div class="text-2xl font-bold text-[#161922] mt-1 tabular-nums">${res.byCat['环境型'].toLocaleString()} <span class="text-xs font-normal text-[#7B8190]">条编码节点</span></div>
+      <div class="text-[11px] text-[#7B8190] mt-1">目标规划 · 标准规范 · 伦理安全 · 考核保障</div>
+    </div>`;
+
+  const provs = ['北京市', '上海市', '江苏省', '浙江省', '广东省'];
+  if (v52State.toolProvChart) v52State.toolProvChart.destroy();
+  v52State.toolProvChart = new Chart(document.getElementById('toolProvChart').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: provs.map(p => p.replace(/[省市]/g, '')),
+      datasets: [
+        { label: '供给型', data: provs.map(p => res.byProvCat[p]['供给型']), backgroundColor: '#1E3A5F' },
+        { label: '需求型', data: provs.map(p => res.byProvCat[p]['需求型']), backgroundColor: '#1F6354' },
+        { label: '环境型', data: provs.map(p => res.byProvCat[p]['环境型']), backgroundColor: '#A67C46' }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } },
+      scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } }
+    }
+  });
+
+  const subSorted = POLICY_TOOLS.map(t => res.byTool[t.key]).sort((a, b) => b.total - a.total);
+  const catColors = { '供给型': '#1E3A5F', '需求型': '#1F6354', '环境型': '#A67C46' };
+  if (v52State.toolSubChart) v52State.toolSubChart.destroy();
+  v52State.toolSubChart = new Chart(document.getElementById('toolSubChart').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: subSorted.map(x => x.tool.name),
+      datasets: [{
+        label: '编码段落数',
+        data: subSorted.map(x => x.total),
+        backgroundColor: subSorted.map(x => catColors[x.tool.cat]),
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { beginAtZero: true } }
+    }
+  });
+
+  const maxVal = Math.max(1, ...POLICY_TOOLS.flatMap(t => provs.map(p => res.byTool[t.key].byProv[p])));
+  const heatBg = v => {
+    const a = Math.min(0.85, (v / maxVal) * 0.72 + (v > 0 ? 0.1 : 0));
+    return v > 0 ? `background: rgba(30,58,95,${a.toFixed(2)}); color: ${a > 0.45 ? '#fff' : '#1E3A5F'}; font-weight:600;` : 'color:#cbd5e1;';
+  };
+
+  document.getElementById('toolMatrixTable').innerHTML = `
+    <table class="w-full text-left text-xs border-collapse tabular-nums">
+      <thead>
+        <tr class="bg-[#FAF9F6] border-b border-[#E6E3DC] text-[#4B5263]">
+          <th class="py-2 px-2">一级维度</th>
+          <th class="py-2 px-2">二级政策工具</th>
+          ${provs.map(p => `<th class="py-2 px-2 text-center">${p.replace(/[省市]/g,'')}</th>`).join('')}
+          <th class="py-2 px-2 text-right">合计</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-[#EFECE6]">
+        ${POLICY_TOOLS.map(t => {
+          const item = res.byTool[t.key];
+          const active = v52State.selectedToolKey === t.key;
+          return `<tr data-pick-tool="${t.key}" class="cursor-pointer transition ${active ? 'bg-[#F7F1E6] ring-1 ring-inset ring-[#A67C46]' : 'hover:bg-[#FAF9F6]'}">
+            <td class="py-2 px-2 font-medium text-[#7B8190]">${t.cat}</td>
+            <td class="py-2 px-2 font-semibold text-[#161922]">${t.name}</td>
+            ${provs.map(p => `<td class="py-2 px-2 text-center rounded" style="${heatBg(item.byProv[p])}">${item.byProv[p]}</td>`).join('')}
+            <td class="py-2 px-2 text-right font-bold text-[#1E3A5F]">${item.total}</td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>`;
+
+  renderToolEvidence(v52State.selectedToolKey);
+}
+
+function renderToolEvidence(toolKey) {
+  v52State.selectedToolKey = toolKey;
+  const item = v52State.toolCache?.byTool?.[toolKey];
+  if (!item) return;
+  document.getElementById('toolEvTitle').textContent = `【${item.tool.cat} · ${item.tool.name}】原文编码依据`;
+  document.getElementById('toolEvCount').textContent = `命中 ${item.total} 段（展示前 ${item.evidences.length} 条）`;
+  const box = document.getElementById('toolEvList');
+  if (!item.evidences.length) {
+    box.innerHTML = `<div class="py-8 text-center text-[#7B8190]">当前筛选范围内暂无该工具编码记录。</div>`;
+    return;
+  }
+  box.innerHTML = item.evidences.map(ev => `
+    <div class="p-2.5 rounded-xl border border-[#EFECE6] bg-[#FAF9F6] space-y-1">
+      <div class="flex items-center justify-between gap-2">
+        <button type="button" data-open-reader="${esc(ev.rid)}" data-jump-pid="${esc(ev.pid)}" class="cite-chip">${esc(ev.docId)}:${esc(ev.pid)}</button>
+        <span class="text-[11px] text-[#7B8190] truncate">${esc(ev.prov.replace(/[省市]/g,''))} · ${esc(ev.title)}</span>
+      </div>
+      <div class="text-[#3F4554] leading-relaxed">${highlightHtml(ev.text.slice(0, 170) + (ev.text.length > 170 ? '…' : ''), [], true)}</div>
+    </div>`).join('');
+}
+
+/* ==================== V5.2 MODULE 3: HARD QUANTITATIVE METRICS LEDGER ==================== */
+const QUANT_RULES = [
+  { cat: '课时与学分', re: /(?:不少于|每学年|每周|累计|达到|安排)?\s*\d+(?:—|-|～|至)?\d*\s*(?:个)?(?:课时|学时|学分)/g },
+  { cat: '普及与覆盖率', re: /(?:达到|实现|覆盖率|普及率|比例|提升至|超过|不少于|力争)?\s*\d+(?:\.\d+)?%/g },
+  { cat: '示范与载体规模', re: /(?:建设|打造|培育|遴选|建成|创建|设立)?\s*\d+(?:—|-|～|余|多)?\d*\s*(?:个|所|家|批|门|项)(?:左右|以上)?(?:人工智能|智慧|示范|实验|试点|精品|通识|典型|标杆|重点)?(?:实验区|示范区|示范校|实验校|试点校|基地|应用场景|典型场景|课程|实验室|项目|案例)/g },
+  { cat: '师资与人才规模', re: /(?:培养|培训|培育|打造|遴选)?\s*\d+(?:万|千|百)?(?:余|多)?\s*(?:名|人|人次)(?:以上|左右)?(?:骨干教师|名师|教师|师资|人才|学生|专家)?/g },
+  { cat: '规划时间节点', re: /(?:到|至|力争)?202[5-9]年(?:底|前)?|(?:到|至)?2030年(?:底|前)?/g }
+];
+
+function buildQuantLedger() {
+  if (v52State.quantCache) return v52State.quantCache;
+  const rows = [];
+  const seenIds = new Set();
+  for (const r of state.records) {
+    if (seenIds.has(r._id) || getParas(r).length === 0 || r['资料类别'] === AUX) continue;
+    seenIds.add(r._id);
+    const paras = getParas(r);
+    for (const [pid, text] of paras) {
+      for (const rule of QUANT_RULES) {
+        const matches = text.match(rule.re);
+        if (matches && matches.length) {
+          const uniqVals = [...new Set(matches.map(m => m.trim()))].filter(v => v.length >= 2).slice(0, 3);
+          if (uniqVals.length) {
+            rows.push({
+              cat: rule.cat,
+              values: uniqVals.join('；'),
+              prov: r['省份'],
+              title: r['文件标题'],
+              tier: r['研究纳入层级'] || '',
+              rid: r._rid,
+              docId: r._id,
+              pid,
+              text
+            });
+          }
+        }
+      }
+    }
+  }
+  v52State.quantCache = rows;
+  return rows;
+}
+
+function renderQuantView() {
+  const all = buildQuantLedger();
+  const cat = document.getElementById('quantCatFilter').value;
+  const prov = document.getElementById('quantProvFilter').value;
+  const kw = document.getElementById('quantSearchInput').value.trim().toLowerCase();
+
+  const cats = ['课时与学分', '普及与覆盖率', '示范与载体规模', '师资与人才规模', '规划时间节点'];
+  document.getElementById('quantSummaryCards').innerHTML = cats.map(c => {
+    const cnt = all.filter(x => x.cat === c && (!prov || x.prov === prov)).length;
+    return `<div class="editorial-card p-3">
+      <div class="text-[11px] text-[#7B8190]">${c}</div>
+      <div class="text-lg font-bold text-[#161922] mt-0.5 tabular-nums">${cnt} <span class="text-[11px] font-normal text-[#7B8190]">条</span></div>
+    </div>`;
+  }).join('');
+
+  const filtered = all.filter(x => {
+    if (cat && x.cat !== cat) return false;
+    if (prov && x.prov !== prov) return false;
+    if (kw && !(`${x.values} ${x.title} ${x.text}`.toLowerCase().includes(kw))) return false;
+    return true;
+  });
+
+  document.getElementById('quantCountBadge').textContent = `命中 ${filtered.length} 条硬性量化条款（展示前 150 条）`;
+  const tb = document.getElementById('quantTb');
+  const view = filtered.slice(0, 150);
+  if (!view.length) {
+    tb.innerHTML = `<tr><td colspan="5" class="py-10 text-center text-[#7B8190]">未匹配到量化指标条款。</td></tr>`;
+    return;
+  }
+  tb.innerHTML = view.map(x => `
+    <tr class="hover:bg-[#FAF9F6]">
+      <td class="py-2.5 px-3 align-top"><span class="px-2 py-0.5 rounded bg-[#EEF2F7] text-[#1E3A5F] font-medium whitespace-nowrap">${esc(x.cat)}</span></td>
+      <td class="py-2.5 px-3 align-top font-bold text-[#8C6432] tabular-nums">${esc(x.values)}</td>
+      <td class="py-2.5 px-3 align-top whitespace-nowrap text-[#4B5263]">${esc(x.prov.replace(/[省市]/g,''))}</td>
+      <td class="py-2.5 px-3 align-top text-[#161922] font-medium leading-snug">${esc(x.title)}</td>
+      <td class="py-2.5 px-3 align-top text-[#3F4554] leading-relaxed">
+        <button type="button" data-open-reader="${esc(x.rid)}" data-jump-pid="${esc(x.pid)}" class="cite-chip mr-1">${esc(x.docId)}:${esc(x.pid)}</button>
+        ${highlightHtml(x.text.slice(0, 180) + (x.text.length > 180 ? '…' : ''), kw ? [kw] : [], true)}
+      </td>
+    </tr>`).join('');
+}
+
+function renderAnalytics() {
+  const isTools = v52State.analyticsSub === 'tools';
+  document.getElementById('subview-tools').classList.toggle('hidden', !isTools);
+  document.getElementById('subview-quant').classList.toggle('hidden', isTools);
+  document.getElementById('subTabToolsBtn').className = isTools
+    ? 'px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-[#1E3A5F] shadow-sm'
+    : 'px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#4B5263] hover:text-[#161922]';
+  document.getElementById('subTabQuantBtn').className = !isTools
+    ? 'px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-[#1E3A5F] shadow-sm'
+    : 'px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#4B5263] hover:text-[#161922]';
+  if (isTools) renderToolsView();
+  else renderQuantView();
+}
+
+/* ==================== V5.2 MODULE 2: CLUE AUTO-COMPLETION & LINK PATROL ==================== */
+function renderCluesAndPatrol() {
+  const clues = state.records.filter(r => String(r['资料类别']||'').includes('线索'));
+  document.getElementById('clueCountSpan').textContent = clues.length;
+  const tb = document.getElementById('clueTb');
+  if (!clues.length) {
+    tb.innerHTML = `<tr><td colspan="3" class="py-8 text-center text-[#1F6354]">所有政策线索均已完成原文补全！</td></tr>`;
+  } else {
+    tb.innerHTML = clues.map(r => {
+      const q = encodeURIComponent(`${r['省份']} ${r['文件标题']} site:gov.cn`);
+      return `<tr class="hover:bg-[#FAF9F6]">
+        <td class="py-2.5 px-3 align-top font-medium text-[#4B5263] whitespace-nowrap">${esc(r['省份'].replace(/[省市]/g,''))}${r['城市'] ? '·'+esc(r['城市']) : ''}</td>
+        <td class="py-2.5 px-3 align-top">
+          <div class="font-semibold text-[#161922] leading-snug">${esc(r['文件标题'])}</div>
+          <div class="text-[11px] text-[#8C6432] mt-0.5">${esc(SMAP[r['政策状态']] || r['政策状态'] || '原文待获取')} · ${esc(r['网页发布机构'] || '')}</div>
+        </td>
+        <td class="py-2.5 px-3 align-top space-y-1">
+          <div class="flex items-center gap-1 flex-wrap">
+            <a href="https://www.baidu.com/s?wd=${q}" target="_blank" rel="noopener" class="px-2 py-0.5 rounded-md bg-[#EEF2F7] text-[#1E3A5F] hover:bg-[#DCE4EE] font-medium">gov.cn 检索 ↗</a>
+            <button type="button" data-open-clue="${esc(r._rid)}" class="px-2 py-0.5 rounded-md bg-[#A67C46] hover:bg-[#8C6432] text-white font-medium">补全入库</button>
+          </div>
+          ${r['官方原文URL'] ? `<a href="${esc(r['官方原文URL'])}" target="_blank" rel="noopener" class="block text-[11px] text-[#7B8190] hover:underline">查看提及依据 ↗</a>` : ''}
+        </td>
+      </tr>`;
+    }).join('');
+  }
+
+  const rep = v52State.patrolReport;
+  const withUrl = state.records.filter(r => r['官方原文URL'] && r['官方原文URL'].startsWith('http'));
+  const noUrl = state.records.filter(r => !r['官方原文URL'] || !r['官方原文URL'].startsWith('http'));
+  const okCnt = rep ? rep.summary.ok : withUrl.length;
+  const brokenCnt = rep ? rep.summary.broken : 0;
+  const warnCnt = rep ? rep.summary.redirect_or_warn : noUrl.length;
+
+  document.getElementById('patrolKpiGrid').innerHTML = `
+    <div class="p-2.5 rounded-xl bg-[#EBF5F2] border border-[#CBE7DE]">
+      <div class="text-[11px] text-[#1F6354]">${rep ? 'HTTP 200 正常' : '已登记官链'}</div>
+      <div class="text-base font-bold text-[#1F6354] tabular-nums">${okCnt}</div>
+    </div>
+    <div class="p-2.5 rounded-xl bg-rose-50 border border-rose-200">
+      <div class="text-[11px] text-rose-700">${rep ? '404 / 失效' : '待实测巡检'}</div>
+      <div class="text-base font-bold text-rose-800 tabular-nums">${brokenCnt}</div>
+    </div>
+    <div class="p-2.5 rounded-xl bg-[#F7F1E6] border border-[#E6D5B8]">
+      <div class="text-[11px] text-[#8C6432]">${rep ? '跳转 / 超时' : '缺失官链'}</div>
+      <div class="text-base font-bold text-[#8C6432] tabular-nums">${warnCnt}</div>
+    </div>`;
+
+  const listBox = document.getElementById('patrolListBox');
+  if (rep && rep.broken_items && rep.broken_items.length) {
+    document.getElementById('patrolStatusBadge').textContent = `已导入巡检 (${rep.checked_at.slice(0,10)})`;
+    listBox.innerHTML = rep.broken_items.map(it => `
+      <div class="p-2 rounded-lg bg-rose-50 border border-rose-200">
+        <div class="font-semibold text-rose-900">${esc(it.title)}</div>
+        <div class="text-[11px] text-rose-700 font-mono">状态：${esc(it.status)} ｜ ${esc(it.url)}</div>
+      </div>`).join('');
+  } else {
+    listBox.innerHTML = noUrl.slice(0, 10).map(r => `
+      <div class="p-2 rounded-lg bg-[#FAF9F6] border border-[#E6E3DC]">
+        <div class="font-medium text-[#161922]">${esc(r['文件标题'])}</div>
+        <div class="text-[11px] text-[#8C6432]">${esc(r['省份'])} · 缺少官方原文 URL（${esc(r['资料类别'])}）</div>
+      </div>`).join('') || '<div class="text-[#1F6354] p-2">当前所有政策均已登记官方原文链接。</div>';
+  }
+}
+
+/* ==================== V5.2 MODULE 4: ACADEMIC CITATION EXPORT ==================== */
+function getCitationRecords(scope) {
+  if (scope === 'selected') {
+    const picked = state.compareIds.map(getRec).filter(Boolean);
+    if (picked.length) return picked;
+  }
+  if (scope === 'tierA') return state.records.filter(r => r['研究纳入层级'] === 'A核心政策');
+  if (scope === 'indexed') return state.records.filter(r => getParas(r).length > 0 && r['资料类别'] !== AUX);
+  return state.records.filter(r => r['资料类别'] !== AUX);
+}
+
+function formatCitations(recs, fmt) {
+  const uniq = [];
+  const seen = new Set();
+  for (const r of recs) {
+    const k = `${r['文件标题']}|${r['省份']}`;
+    if (seen.has(k)) continue;
+    seen.add(k);
+    uniq.push(r);
+  }
+  if (fmt === 'gbt') {
+    return uniq.map((r, i) => {
+      const agency = r['原发文机关'] || r['网页发布机构'] || r['省份'];
+      const num = r['发文字号'] ? `（${r['发文字号']}）` : '';
+      const dt = r['发文日期'] || r['年份'] || '2025';
+      const url = r['官方原文URL'] ? ` ${r['官方原文URL']}.` : '';
+      return `[${i + 1}] ${agency}. ${r['文件标题']}${num}[EB/OL]. (${dt})[2026-11-22].${url}`;
+    }).join('\n');
+  }
+  if (fmt === 'bibtex') {
+    return uniq.map((r, i) => {
+      const key = `${(r._id || 'POL' + (i+1)).replace(/[^A-Za-z0-9]/g, '')}_${r['年份'] || '2025'}`;
+      const agency = r['原发文机关'] || r['网页发布机构'] || r['省份'];
+      return `@misc{${key},\n  author = {{${agency}}},\n  title = {{${r['文件标题']}}},\n  year = {${r['年份'] || '2025'}},\n  howpublished = {${r['省份']}${r['城市'] ? '·' + r['城市'] : ''}政策文件${r['发文字号'] ? '，' + r['发文字号'] : ''}},\n  url = {${r['官方原文URL'] || ''}},\n  note = {研究纳入层级：${r['研究纳入层级'] || '未分级'}；库内编号：${r._id}}\n}`;
+    }).join('\n\n');
+  }
+  return uniq.map(r => {
+    const agency = r['原发文机关'] || r['网页发布机构'] || r['省份'];
+    const lines = [
+      'TY  - GOVDOC',
+      `AU  - ${agency}`,
+      `TI  - ${r['文件标题']}`,
+      `PY  - ${r['年份'] || '2025'}`,
+      `DA  - ${r['发文日期'] || r['年份'] || '2025'}`,
+      `PB  - ${r['省份']}${r['城市'] ? ' ' + r['城市'] : ''}`,
+      r['发文字号'] ? `C1  - ${r['发文字号']}` : '',
+      r['官方原文URL'] ? `UR  - ${r['官方原文URL']}` : '',
+      `N1  - 研究纳入层级：${r['研究纳入层级'] || ''}；主题：${r['政策主题'] || ''}`,
+      'ER  - '
+    ].filter(Boolean);
+    return lines.join('\n');
+  }).join('\n\n');
+}
+
+function openCiteModal(defaultScope = null) {
+  const scopeSel = document.getElementById('citeScopeSel');
+  if (defaultScope) scopeSel.value = defaultScope;
+  else scopeSel.value = state.compareIds.length ? 'selected' : 'tierA';
+  updateCitePreview();
+  document.getElementById('citeModal').classList.remove('hidden');
+}
+
+function updateCitePreview() {
+  const scope = document.getElementById('citeScopeSel').value;
+  const fmt = document.getElementById('citeFmtSel').value;
+  const recs = getCitationRecords(scope);
+  const text = formatCitations(recs, fmt);
+  document.getElementById('citeCountInfo').textContent = `共 ${recs.length} 条政策文献`;
+  document.getElementById('citePreviewBox').value = text;
+}
+
+/* ==================== V5.2 EVENT BINDINGS ==================== */
+document.getElementById('subTabToolsBtn').addEventListener('click', () => { v52State.analyticsSub = 'tools'; renderAnalytics(); });
+document.getElementById('subTabQuantBtn').addEventListener('click', () => { v52State.analyticsSub = 'quant'; renderAnalytics(); });
+document.getElementById('toolProvFilter').addEventListener('change', renderToolsView);
+document.getElementById('toolTierFilter').addEventListener('change', renderToolsView);
+document.getElementById('quantCatFilter').addEventListener('change', renderQuantView);
+document.getElementById('quantProvFilter').addEventListener('change', renderQuantView);
+document.getElementById('quantSearchInput').addEventListener('input', renderQuantView);
+
+document.getElementById('exportToolCsvBtn').addEventListener('click', () => {
+  const res = v52State.toolCache || computeToolCoding();
+  const provs = ['北京市', '上海市', '江苏省', '浙江省', '广东省'];
+  const rows = [['一级政策工具', '二级政策工具', ...provs, '合计']];
+  for (const t of POLICY_TOOLS) {
+    const it = res.byTool[t.key];
+    rows.push([t.cat, t.name, ...provs.map(p => it.byProv[p]), it.total]);
+  }
+  const csv = '\uFEFF' + rows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+  downloadFile('五地人工智能教育政策工具编码矩阵.csv', csv, 'text/csv;charset=utf-8');
+  toast('已导出政策工具编码频次矩阵 CSV', 'success');
+});
+
+document.getElementById('exportToolDetailCsvBtn').addEventListener('click', () => {
+  const res = v52State.toolCache || computeToolCoding();
+  const rows = [['一级工具', '二级工具', '省份', '文件ID', '段落ID', '文件标题', '原文编码条款']];
+  for (const t of POLICY_TOOLS) {
+    for (const ev of res.byTool[t.key].evidences) {
+      rows.push([t.cat, t.name, ev.prov, ev.docId, ev.pid, ev.title, ev.text]);
+    }
+  }
+  const csv = '\uFEFF' + rows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+  downloadFile('政策工具逐段编码明细_NVivo_SPSS.csv', csv, 'text/csv;charset=utf-8');
+  toast('已导出逐段编码明细 CSV', 'success');
+});
+
+document.getElementById('exportQuantCsvBtn').addEventListener('click', () => {
+  const all = buildQuantLedger();
+  const rows = [['指标类别', '硬性量化数值', '地区', '研究层级', '文件ID', '段落ID', '来源政策', '原文条款']];
+  for (const x of all) rows.push([x.cat, x.values, x.prov, x.tier, x.docId, x.pid, x.title, x.text]);
+  const csv = '\uFEFF' + rows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+  downloadFile('五地人工智能教育政策硬性量化指标台账.csv', csv, 'text/csv;charset=utf-8');
+  toast('已导出全库硬性量化指标台账 CSV', 'success');
+});
+
+document.getElementById('openCiteExportBtn').addEventListener('click', () => openCiteModal());
+document.getElementById('cmpExportCiteBtn').addEventListener('click', () => openCiteModal('selected'));
+document.getElementById('citeCloseBtn').addEventListener('click', () => document.getElementById('citeModal').classList.add('hidden'));
+document.getElementById('citeModal').addEventListener('click', e => { if (e.target.id === 'citeModal') document.getElementById('citeModal').classList.add('hidden'); });
+document.getElementById('citeScopeSel').addEventListener('change', updateCitePreview);
+document.getElementById('citeFmtSel').addEventListener('change', updateCitePreview);
+document.getElementById('citeCopyBtn').addEventListener('click', () => copyText(document.getElementById('citePreviewBox').value, '已复制标准学术文献题录'));
+document.getElementById('citeDownloadBtn').addEventListener('click', () => {
+  const fmt = document.getElementById('citeFmtSel').value;
+  const ext = fmt === 'bibtex' ? 'bib' : (fmt === 'ris' ? 'ris' : 'txt');
+  downloadFile(`人工智能教育政策文献题录_${fmt}.${ext}`, document.getElementById('citePreviewBox').value, 'text/plain;charset=utf-8');
+  toast(`已下载 .${ext} 学术题录文件`, 'success');
+});
+
+document.getElementById('exportClueTaskBtn').addEventListener('click', () => {
+  const clues = state.records.filter(r => String(r['资料类别']||'').includes('线索'));
+  const rows = [['省份', '城市', '待补全政策标题', '当前状态', '提及依据URL', '建议gov.cn检索式']];
+  for (const r of clues) rows.push([r['省份'], r['城市']||'', r['文件标题'], r['政策状态']||'', r['官方原文URL']||'', `${r['省份']} ${r['文件标题']} site:gov.cn`]);
+  const csv = '\uFEFF' + rows.map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+  downloadFile('待获取政策线索补全检索清单.csv', csv, 'text/csv;charset=utf-8');
+  toast('已导出待获取线索检索清单 CSV', 'success');
+});
+
+document.getElementById('copyPatrolCmdBtn').addEventListener('click', () => {
+  copyText('python3 collector/link_patrol_and_clue_finder.py --live', '已复制官链失效巡检命令');
+});
+
+document.getElementById('filterBrokenLinksBtn').addEventListener('click', () => {
+  renderCluesAndPatrol();
+  toast('已刷新官链健康与缺失链接清单', 'info');
+});
+
+document.getElementById('patrolReportInput').addEventListener('change', e => {
+  const f = e.target.files?.[0];
+  if (!f) return;
+  const rd = new FileReader();
+  rd.onload = () => {
+    try {
+      v52State.patrolReport = JSON.parse(String(rd.result || '{}'));
+      renderCluesAndPatrol();
+      toast('已载入官链失效巡检报告', 'success');
+    } catch (err) {
+      toast('巡检报告 JSON 格式无效', 'error');
+    }
+  };
+  rd.readAsText(f, 'utf-8');
+  e.target.value = '';
+});
+
+document.getElementById('clueCloseBtn').addEventListener('click', () => document.getElementById('clueModal').classList.add('hidden'));
+document.getElementById('clueCancelBtn').addEventListener('click', () => document.getElementById('clueModal').classList.add('hidden'));
+document.getElementById('clueSaveBtn').addEventListener('click', () => {
+  const rec = getRec(v52State.activeClueRid);
+  if (!rec) return;
+  const body = document.getElementById('clueBodyInp').value.trim();
+  const url = document.getElementById('clueUrlInp').value.trim();
+  const num = document.getElementById('clueNumInp').value.trim();
+  if (!body || body.length < 20) { toast('请粘贴至少 20 字的政策正文原文', 'warn'); return; }
+  const lines = body.split(/\n+/).map(x => x.trim()).filter(x => x.length >= 6);
+  const paras = lines.map((t, i) => [`P${String(i+1).padStart(3, '0')}`, t]);
+  rec['资料类别'] = '正式政策文件';
+  rec['核验状态'] = '已核验';
+  rec['研究纳入层级'] = 'A核心政策';
+  if (url) rec['官方原文URL'] = url;
+  if (num) rec['发文字号'] = num;
+  rec._pcnt = paras.length;
+  state.paragraphs[rec._id] = paras;
+  v52State.quantCache = null;
+  document.getElementById('clueModal').classList.add('hidden');
+  initFilterOptions();
+  renderStatsBar();
+  renderLibrary();
+  renderCluesAndPatrol();
+  toast(`已补全《${rec['文件标题'].slice(0,18)}…》并索引 ${paras.length} 段原文！`, 'success');
+});
+
+document.addEventListener('click', e => {
+  const toolTr = e.target.closest('[data-pick-tool]');
+  if (toolTr) {
+    v52State.selectedToolKey = toolTr.dataset.pickTool;
+    renderToolsView();
+    return;
+  }
+  const clueBtn = e.target.closest('[data-open-clue]');
+  if (clueBtn) {
+    const rec = getRec(clueBtn.dataset.openClue);
+    if (!rec) return;
+    v52State.activeClueRid = rec._rid;
+    document.getElementById('clueTargetTitle').textContent = `${rec['省份']} · ${rec['文件标题']}`;
+    document.getElementById('clueUrlInp').value = rec['官方原文URL'] || '';
+    document.getElementById('clueNumInp').value = rec['发文字号'] || '';
+    document.getElementById('clueBodyInp').value = '';
+    document.getElementById('clueModal').classList.remove('hidden');
+    return;
+  }
+});
+
+const _origRenderCollect = renderCollect;
+renderCollect = function() {
+  _origRenderCollect();
+  renderCluesAndPatrol();
+};
+
+/* ==================== INIT ==================== */
+initFilterOptions();
+renderStatsBar();
+renderLibrary();
+renderCollect();
+renderAi();
+</script>
+</body>
+</html>

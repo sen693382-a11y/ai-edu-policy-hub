@@ -1,0 +1,165 @@
+{
+  "checked_at": "2026-11-22T11:54:01",
+  "mode": "DRY_RUN",
+  "summary": {
+    "total_records": 185,
+    "checked_urls": 185,
+    "ok": 185,
+    "broken": 0,
+    "redirect_or_warn": 0,
+    "pending_clues": 25
+  },
+  "broken_items": [],
+  "clue_queries": [
+    {
+      "province": "广东省",
+      "title": "广东省人工智能赋能基础教育行动方案（2024—2027）",
+      "status": "已印发",
+      "suggested_query": "广东省 广东省人工智能赋能基础教育行动方案（2024—2027） site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "常州市人工智能赋能教育高质量发展行动方案",
+      "status": "制定中",
+      "suggested_query": "江苏省 常州市人工智能赋能教育高质量发展行动方案 site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "常州经开区人工智能赋能教育高质量发展行动方案（2026—2028年）",
+      "status": "已印发",
+      "suggested_query": "江苏省 常州经开区人工智能赋能教育高质量发展行动方案（2026—2028年） site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "扬州市人工智能赋能教育高质量发展行动计划（2025—2027年）",
+      "status": "已印发",
+      "suggested_query": "江苏省 扬州市人工智能赋能教育高质量发展行动计划（2025—2027年） site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "镇江市人工智能赋能教育高质量发展行动方案",
+      "status": "已印发",
+      "suggested_query": "江苏省 镇江市人工智能赋能教育高质量发展行动方案 site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "杭州市推进中小学“人工智能+教育”实施方案（2025—2027年）",
+      "status": "已印发",
+      "suggested_query": "浙江省 杭州市推进中小学“人工智能+教育”实施方案（2025—2027年） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "杭州市中小学人工智能教育地方课程纲要（试行）",
+      "status": "已印发",
+      "suggested_query": "浙江省 杭州市中小学人工智能教育地方课程纲要（试行） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "杭州市中小学教师人工智能素养框架（试行）",
+      "status": "已印发",
+      "suggested_query": "浙江省 杭州市中小学教师人工智能素养框架（试行） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "宁波市中小学人工智能教育行动方案（2026—2028年）",
+      "status": "已印发",
+      "suggested_query": "浙江省 宁波市中小学人工智能教育行动方案（2026—2028年） site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "无锡市中小学人工智能教育相关框架、纲要及指南（2025年版）（系列5件）",
+      "status": "已印发",
+      "suggested_query": "江苏省 无锡市中小学人工智能教育相关框架、纲要及指南（2025年版）（系列5件） site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "无锡市教师人工智能素养提升三年行动计划（2026—2028年）",
+      "status": "制定中",
+      "suggested_query": "江苏省 无锡市教师人工智能素养提升三年行动计划（2026—2028年） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "中小学人工智能教育应用指南（2025版）、高校人工智能教育应用指南（2025版）",
+      "status": "已印发",
+      "suggested_query": "浙江省 中小学人工智能教育应用指南（2025版）、高校人工智能教育应用指南（2025版） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "浙江省高等学校教师人工智能素养框架（试行）",
+      "status": "已印发",
+      "suggested_query": "浙江省 浙江省高等学校教师人工智能素养框架（试行） site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "江苏省中小学人工智能课程指导纲要（2025年版）",
+      "status": "已印发",
+      "suggested_query": "江苏省 江苏省中小学人工智能课程指导纲要（2025年版） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "嘉兴市推进“人工智能+教育”行动方案（2026—2030年）",
+      "status": "已印发",
+      "suggested_query": "浙江省 嘉兴市推进“人工智能+教育”行动方案（2026—2030年） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "舟山市人工智能赋能教育教学改革五年行动计划（2026—2030年）",
+      "status": "已印发",
+      "suggested_query": "浙江省 舟山市人工智能赋能教育教学改革五年行动计划（2026—2030年） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "衢州市推进中小学人工智能通识教育实施指南",
+      "status": "已印发",
+      "suggested_query": "浙江省 衢州市推进中小学人工智能通识教育实施指南 site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "宿迁市人工智能赋能教育高质量发展行动计划（2026—2028年）",
+      "status": "已印发",
+      "suggested_query": "江苏省 宿迁市人工智能赋能教育高质量发展行动计划（2026—2028年） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "台州市“人工智能+教育”三年行动计划（2025—2027年）",
+      "status": "已印发",
+      "suggested_query": "浙江省 台州市“人工智能+教育”三年行动计划（2025—2027年） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "台州市中小学人工智能课程实施办法",
+      "status": "制定中",
+      "suggested_query": "浙江省 台州市中小学人工智能课程实施办法 site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "温州市“人工智能+教育”三年行动计划（2025—2027年）",
+      "status": "已印发",
+      "suggested_query": "浙江省 温州市“人工智能+教育”三年行动计划（2025—2027年） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "温州市中小学人工智能教育课程实施指导意见",
+      "status": "已印发",
+      "suggested_query": "浙江省 温州市中小学人工智能教育课程实施指导意见 site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "连云港市人工智能赋能基础教育三年行动计划（2025—2027年）",
+      "status": "已印发",
+      "suggested_query": "江苏省 连云港市人工智能赋能基础教育三年行动计划（2025—2027年） site:gov.cn"
+    },
+    {
+      "province": "江苏省",
+      "title": "推进人工智能赋能基础教育高质量发展三年行动方案（云龙区）",
+      "status": "已印发",
+      "suggested_query": "江苏省 推进人工智能赋能基础教育高质量发展三年行动方案（云龙区） site:gov.cn"
+    },
+    {
+      "province": "浙江省",
+      "title": "中小学人工智能科创实验室建设指引、iTech人工智能网络课程标准",
+      "status": "已印发",
+      "suggested_query": "浙江省 中小学人工智能科创实验室建设指引、iTech人工智能网络课程标准 site:gov.cn"
+    }
+  ]
+}

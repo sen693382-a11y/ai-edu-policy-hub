@@ -1,0 +1,212 @@
+{
+  "schema_version": 5,
+  "sources": [
+    {
+      "province": "国家级",
+      "name": "中华人民共和国教育部",
+      "url": "https://www.moe.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "中小学",
+        "通识教育",
+        "生成式"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "北京市",
+      "name": "北京市教育委员会",
+      "url": "https://jw.beijing.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "中小学",
+        "应用指南",
+        "通识"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "北京市",
+      "name": "北京教育科学研究院",
+      "url": "https://www.bjesr.cn/",
+      "keywords": [
+        "人工智能",
+        "素养框架",
+        "课程"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "上海市",
+      "name": "上海市教育委员会",
+      "url": "https://edu.sh.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "基础教育",
+        "教学实施",
+        "试验区"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "上海市",
+      "name": "浦东新区人民政府/教育局",
+      "url": "https://www.pudong.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "素养提升",
+        "教育"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "江苏省",
+      "name": "江苏省教育厅",
+      "url": "https://jyt.jiangsu.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "赋能教育",
+        "通识课",
+        "高校"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "江苏省",
+      "name": "南京市教育局",
+      "url": "http://edu.nanjing.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "教育数字化",
+        "中小学"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "江苏省",
+      "name": "苏州市教育局",
+      "url": "http://jyj.suzhou.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "教育",
+        "工作方案"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "江苏省",
+      "name": "无锡市教育局",
+      "url": "http://jy.wuxi.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "教育",
+        "人才培养"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "江苏省",
+      "name": "常州市教育局",
+      "url": "https://jyj.changzhou.gov.cn/",
+      "keywords": [
+        "人工智能+教育",
+        "工作要点",
+        "领航"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "江苏省",
+      "name": "泰州市教育局",
+      "url": "https://jyj.taizhou.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "赋能教育",
+        "高质量发展"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "浙江省",
+      "name": "浙江省教育厅",
+      "url": "https://jyt.zj.gov.cn/",
+      "keywords": [
+        "人工智能+教育",
+        "通识教育",
+        "改革试点"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "浙江省",
+      "name": "杭州市教育局",
+      "url": "https://edu.hangzhou.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "工作计划",
+        "中小学"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "浙江省",
+      "name": "宁波市教育局",
+      "url": "https://jyj.ningbo.gov.cn/",
+      "keywords": [
+        "人工智能",
+        "通识教育",
+        "中小学"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "浙江省",
+      "name": "温州市教育局",
+      "url": "https://edu.wenzhou.gov.cn/",
+      "keywords": [
+        "人工智能+教育",
+        "三年行动计划"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "广东省",
+      "name": "广东省教育厅",
+      "url": "https://edu.gd.gov.cn/",
+      "keywords": [
+        "人工智能+教育",
+        "课程指导纲要",
+        "素养框架"
+      ],
+      "verified": true,
+      "enabled": true
+    },
+    {
+      "province": "广东省",
+      "name": "深圳市人民政府/教育局",
+      "url": "https://www.sz.gov.cn/",
+      "keywords": [
+        "教育人工智能",
+        "先锋城市",
+        "中小学"
+      ],
+      "verified": true,
+      "enabled": true
+    }
+  ]
+}

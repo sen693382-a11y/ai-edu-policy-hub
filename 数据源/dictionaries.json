@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "description": "分类与状态字典。code 为库内稳定标识，label 为界面中文显示名。未知信息允许为空，不得由 AI 推测补齐。",
+  "dictionaries": [
+    {
+      "dict_type": "resource_type",
+      "label": "一级资料类型",
+      "items": [
+        {"code": "formal_policy", "label": "正式政策", "sort_order": 1, "extra": {"counts_in_formal_statistic": true}, "description": "正式发布的行动方案、指导意见、实施方案、政策通知、课程纲要、应用指南等"},
+        {"code": "official_interpretation", "label": "官方解读", "sort_order": 2, "extra": {"counts_in_formal_statistic": false}, "description": "官方政策问答、政策图解、解释说明、解读材料"},
+        {"code": "official_news", "label": "官方动态", "sort_order": 3, "extra": {"counts_in_formal_statistic": false}, "description": "政府新闻、发布会报道、实施进展、工作会议消息"},
+        {"code": "draft_for_comment", "label": "征求意见稿", "sort_order": 4, "extra": {"counts_in_formal_statistic": false}, "description": "征求意见公告及草案，仅以非正式资料状态收录"}
+      ]
+    },
+    {
+      "dict_type": "policy_direction",
+      "label": "政策研究方向",
+      "items": [
+        {"code": "ai_education", "label": "人工智能教育", "sort_order": 1, "description": "AI 作为学习内容"},
+        {"code": "ai_empowered_education", "label": "人工智能赋能教育", "sort_order": 2, "description": "AI 作为教育技术与教学工具"},
+        {"code": "both", "label": "两者兼具", "sort_order": 3, "description": "同时包含两类内容"}
+      ]
+    },
+    {
+      "dict_type": "education_stage",
+      "label": "教育阶段",
+      "items": [
+        {"code": "preschool", "label": "学前", "sort_order": 1},
+        {"code": "primary", "label": "小学", "sort_order": 2},
+        {"code": "junior", "label": "初中", "sort_order": 3},
+        {"code": "senior", "label": "高中", "sort_order": 4},
+        {"code": "vocational", "label": "职业教育", "sort_order": 5},
+        {"code": "higher", "label": "高等教育", "sort_order": 6},
+        {"code": "continuing", "label": "继续教育", "sort_order": 7},
+        {"code": "cross_stage", "label": "跨学段", "sort_order": 8}
+      ]
+    },
+    {
+      "dict_type": "topic",
+      "label": "政策主题",
+      "items": [
+        {"code": "curriculum", "label": "课程教材", "sort_order": 1},
+        {"code": "teacher", "label": "教师发展", "sort_order": 2},
+        {"code": "teaching_innovation", "label": "教学创新", "sort_order": 3},
+        {"code": "learning_support", "label": "学习支持", "sort_order": 4},
+        {"code": "evaluation", "label": "教育评价", "sort_order": 5},
+        {"code": "infrastructure", "label": "基础设施", "sort_order": 6},
+        {"code": "data_governance", "label": "数据治理", "sort_order": 7},
+        {"code": "ethics_safety", "label": "伦理安全", "sort_order": 8},
+        {"code": "talent", "label": "学科人才培养", "sort_order": 9},
+        {"code": "pilot", "label": "试点示范", "sort_order": 10}
+      ]
+    },
+    {
+      "dict_type": "document_type",
+      "label": "文件形式",
+      "items": [
+        {"code": "action_plan", "label": "行动方案", "sort_order": 1},
+        {"code": "guiding_opinion", "label": "指导意见", "sort_order": 2},
+        {"code": "implementation_plan", "label": "实施方案", "sort_order": 3},
+        {"code": "work_notice", "label": "工作通知", "sort_order": 4},
+        {"code": "curriculum_outline", "label": "课程纲要", "sort_order": 5},
+        {"code": "competency_framework", "label": "能力框架", "sort_order": 6},
+        {"code": "application_guide", "label": "应用指南", "sort_order": 7},
+        {"code": "planning_document", "label": "规划文件", "sort_order": 8},
+        {"code": "other", "label": "其他", "sort_order": 9}
+      ]
+    },
+    {
+      "dict_type": "administrative_level",
+      "label": "行政层级",
+      "items": [
+        {"code": "province", "label": "省级", "sort_order": 1},
+        {"code": "city", "label": "市级", "sort_order": 2}
+      ]
+    },
+    {
+      "dict_type": "source_type",
+      "label": "来源性质（P0 溯源）",
+      "items": [
+        {"code": "original_release", "label": "原始发布", "sort_order": 1, "description": "原始发文机关自身渠道发布"},
+        {"code": "official_reprint", "label": "官方转载", "sort_order": 2, "description": "其他官方渠道转载，不生成新的独立政策"},
+        {"code": "official_companion", "label": "官方配套资料", "sort_order": 3, "description": "解读、问答、图解、动态等配套材料"}
+      ]
+    },
+    {
+      "dict_type": "verification_status",
+      "label": "核验状态（P0 溯源）",
+      "items": [
+        {"code": "verified", "label": "已核验", "sort_order": 1},
+        {"code": "pending", "label": "待核验", "sort_order": 2},
+        {"code": "failed", "label": "核验失败", "sort_order": 3},
+        {"code": "source_dead", "label": "来源失效", "sort_order": 4}
+      ]
+    },
+    {
+      "dict_type": "review_status",
+      "label": "审核状态",
+      "items": [
+        {"code": "pending", "label": "待审核", "sort_order": 1},
+        {"code": "in_review", "label": "审核中", "sort_order": 2},
+        {"code": "approved", "label": "已审核", "sort_order": 3},
+        {"code": "rejected", "label": "已驳回", "sort_order": 4}
+      ]
+    },
+    {
+      "dict_type": "validity_status",
+      "label": "效力状态",
+      "items": [
+        {"code": "effective", "label": "有效", "sort_order": 1},
+        {"code": "expired", "label": "失效", "sort_order": 2},
+        {"code": "abolished", "label": "废止", "sort_order": 3},
+        {"code": "to_confirm", "label": "待确认", "sort_order": 4},
+        {"code": "unknown", "label": "未知", "sort_order": 5}
+      ]
+    },
+    {
+      "dict_type": "content_format",
+      "label": "正文格式",
+      "items": [
+        {"code": "HTML", "label": "HTML", "sort_order": 1},
+        {"code": "PDF", "label": "PDF", "sort_order": 2},
+        {"code": "DOCX", "label": "DOCX", "sort_order": 3},
+        {"code": "OTHER", "label": "其他", "sort_order": 4},
+        {"code": "UNKNOWN", "label": "未知", "sort_order": 5}
+      ]
+    },
+    {
+      "dict_type": "completeness_status",
+      "label": "完整性状态",
+      "items": [
+        {"code": "complete", "label": "完整", "sort_order": 1},
+        {"code": "body_missing", "label": "正文缺失", "sort_order": 2},
+        {"code": "attachment_missing", "label": "附件缺失", "sort_order": 3},
+        {"code": "partial", "label": "部分提取", "sort_order": 4},
+        {"code": "unknown", "label": "未知", "sort_order": 5}
+      ]
+    },
+    {
+      "dict_type": "coverage_status",
+      "label": "检索覆盖状态",
+      "items": [
+        {"code": "not_searched", "label": "未检索", "sort_order": 1},
+        {"code": "searched", "label": "已检索", "sort_order": 2},
+        {"code": "to_verify", "label": "待核验", "sort_order": 3},
+        {"code": "verified", "label": "已核验", "sort_order": 4},
+        {"code": "restricted", "label": "检索受限", "sort_order": 5}
+      ]
+    },
+    {
+      "dict_type": "relation_type",
+      "label": "政策—资料关联类型",
+      "items": [
+        {"code": "original_text", "label": "原文", "sort_order": 1},
+        {"code": "official_reprint", "label": "官方转载", "sort_order": 2},
+        {"code": "interpretation", "label": "官方解读", "sort_order": 3},
+        {"code": "news", "label": "官方动态", "sort_order": 4},
+        {"code": "revision", "label": "修订版本", "sort_order": 5},
+        {"code": "abolition_notice", "label": "废止通知", "sort_order": 6},
+        {"code": "draft", "label": "征求意见稿", "sort_order": 7}
+      ]
+    },
+    {
+      "dict_type": "collection_status",
+      "label": "采集任务状态",
+      "items": [
+        {"code": "not_run", "label": "未运行", "sort_order": 1},
+        {"code": "running", "label": "进行中", "sort_order": 2},
+        {"code": "completed", "label": "已完成", "sort_order": 3},
+        {"code": "partial_failed", "label": "部分失败", "sort_order": 4},
+        {"code": "failed", "label": "失败", "sort_order": 5}
+      ]
+    },
+    {
+      "dict_type": "check_result",
+      "label": "来源核验结论",
+      "items": [
+        {"code": "passed", "label": "通过", "sort_order": 1},
+        {"code": "manual_required", "label": "待人工审核", "sort_order": 2},
+        {"code": "failed", "label": "失败", "sort_order": 3}
+      ]
+    },
+    {
+      "dict_type": "data_origin",
+      "label": "数据来源标记（真实/测试隔离）",
+      "items": [
+        {"code": "UNSPECIFIED", "label": "未声明", "sort_order": 1, "description": "默认状态，不参与任何正式统计"},
+        {"code": "REAL", "label": "真实资料", "sort_order": 2, "description": "仅人工审核并通过来源核验后可设置"},
+        {"code": "TEST", "label": "测试数据", "sort_order": 3, "description": "仅用于自动化测试，不参与任何正式统计"}
+      ]
+    }
+  ]
+}
